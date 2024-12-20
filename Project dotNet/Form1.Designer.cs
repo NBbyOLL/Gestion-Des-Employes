@@ -29,6 +29,7 @@ namespace Project_dotNet
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Emsi));
             panel1 = new Panel();
             label1 = new Label();
             login_show_password = new CheckBox();
@@ -40,12 +41,15 @@ namespace Project_dotNet
             labelName = new Label();
             Role = new Label();
             loginAccount = new TextBox();
+            pictureBox1 = new PictureBox();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.IndianRed;
+            panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(label1);
             panel1.Location = new Point(490, 0);
             panel1.Name = "panel1";
@@ -154,6 +158,17 @@ namespace Project_dotNet
             loginAccount.TabIndex = 31;
             loginAccount.Text = "Login Account";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(-41, 105);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(507, 489);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 1;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click_2;
+            // 
             // Emsi
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -176,6 +191,7 @@ namespace Project_dotNet
             Load += Form1_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -194,5 +210,6 @@ namespace Project_dotNet
         private Label Role;
         private TextBox loginAccount;
         private Label label1;
+        private PictureBox pictureBox1;
     }
 }

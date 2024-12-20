@@ -11,7 +11,7 @@ namespace Project_dotNet
         public Emsi()
         {
             InitializeComponent();
-           
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -21,7 +21,7 @@ namespace Project_dotNet
 
         private void label1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -106,6 +106,11 @@ namespace Project_dotNet
                     MessageBox.Show("Error: " + ex.Message);
                 }
             }
+        }
+
+        private void pictureBox1_Click_2(object sender, EventArgs e)
+        {
+
         }
     }
 }
