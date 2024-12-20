@@ -29,6 +29,7 @@ namespace Project_dotNet
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             panel1 = new Panel();
             label1 = new Label();
             login_show_password = new CheckBox();
@@ -40,6 +41,11 @@ namespace Project_dotNet
             labelName = new Label();
             Role = new Label();
             loginAccount = new TextBox();
+            toolTip1 = new ToolTip(components);
+            toolTip2 = new ToolTip(components);
+            guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(components);
+            guna2AnimateWindow2 = new Guna.UI2.WinForms.Guna2AnimateWindow(components);
+            guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -114,6 +120,7 @@ namespace Project_dotNet
             login_role.Name = "login_role";
             login_role.Size = new Size(216, 28);
             login_role.TabIndex = 26;
+            login_role.SelectedIndexChanged += login_role_SelectedIndexChanged;
             // 
             // login_name
             // 
@@ -153,6 +160,12 @@ namespace Project_dotNet
             loginAccount.Size = new Size(245, 38);
             loginAccount.TabIndex = 31;
             loginAccount.Text = "Login Account";
+            // 
+            // guna2BorderlessForm1
+            // 
+            guna2BorderlessForm1.ContainerControl = this;
+            guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
             // Emsi
             // 
@@ -194,5 +207,10 @@ namespace Project_dotNet
         private Label Role;
         private TextBox loginAccount;
         private Label label1;
+        private ToolTip toolTip1;
+        private ToolTip toolTip2;
+        private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
+        private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow2;
+        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
     }
 }
