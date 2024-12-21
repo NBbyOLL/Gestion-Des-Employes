@@ -1,17 +1,28 @@
+using Project_dotNet.Forms;
 using System;
-using MySql.Data.MySqlClient;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
+using System.Windows.Forms;
+using System.Data;
+
+
 
 
 
 namespace Project_dotNet
 {
+
     public partial class Emsi : Form
     {
+        private SqlConnection connect;
+
         public Emsi()
         {
             InitializeComponent();
-           
+
+            connect = new SqlConnection(@"Data Source=localhost\SQLEXPRESS;Initial Catalog=winformdb;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
+
+
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -21,7 +32,7 @@ namespace Project_dotNet
 
         private void label1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -29,11 +40,7 @@ namespace Project_dotNet
 
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-
-        }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
@@ -50,10 +57,7 @@ namespace Project_dotNet
 
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             throw new NotImplementedException();
@@ -69,43 +73,71 @@ namespace Project_dotNet
             throw new NotImplementedException();
         }
 
-        private void login_Click(object sender, EventArgs e)
+
+
+
+
+        private void guna2CircleButton1_Click(object sender, EventArgs e)
         {
-            string connstring = "server=localhost;uid=root;pwd=123456;database=farmchicken;port=3307";
 
-            string username = labelName.Text;
-            string password = Password.Text;
-            string role = login_role.ToString();
+        }
 
-            using (MySqlConnection conn = new MySqlConnection(connstring))
+        private void login_show_password_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (login_show_password.Checked)
             {
-                try
-                {
-                    conn.Open();
-                    string query = "SELECT * FROM users WHERE name = @username AND password = @password AND role = @role";
-                    MySqlCommand cmd = new MySqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@username", username);
-                    cmd.Parameters.AddWithValue("@password", password);
-                    cmd.Parameters.AddWithValue("@role", role);
+                login_password.PasswordChar = '\0';
+            }
+            else
+            {
+                login_password.PasswordChar = '*';
+            }
 
-                    MySqlDataReader reader = cmd.ExecuteReader();
-                    if (reader.HasRows)
-                    {
-                        // If login is successful
-                        MessageBox.Show("Login successful!");
-                        // Proceed to next action, such as opening the main form or dashboard
-                    }
-                    else
-                    {
-                        // If login fails
-                        MessageBox.Show("Invalid username, password, or role.");
-                    }
-                }
-                catch (Exception ex)
+        }
+
+
+
+        private void login_password_TextChanged(object sender, EventArgs e)
+        {
+            login_password.PasswordChar = '*';
+        }
+
+        private void Password_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void login_name_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+            {
+                // You can check if the username and password match "admin" here
+                if (login_name.Text == "admin" && login_password.Text == "admin")
                 {
-                    MessageBox.Show("Error: " + ex.Message);
+                    // If credentials match, show the AdminDashboard form
+                    MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    adminDaashboard adminDashboard = new adminDaashboard();
+                    adminDashboard.Show();
+                    this.Hide();  // Hide the login form
+                }
+                else
+                {
+                    // If credentials are incorrect, show an error message
+                    MessageBox.Show("Invalid username or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
