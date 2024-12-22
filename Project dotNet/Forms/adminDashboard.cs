@@ -39,7 +39,9 @@ namespace Project_dotNet.Forms
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-
+            addEmployees addEmp = new addEmployees();
+            addEmp.Show();
+            this.Hide();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -59,12 +61,17 @@ namespace Project_dotNet.Forms
 
         private void adminLogout_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show  ("Are you sure you want to logout?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Are you sure you want to logout?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Hide();
                 Emsi login = new Emsi();
                 login.Show();
             }
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
