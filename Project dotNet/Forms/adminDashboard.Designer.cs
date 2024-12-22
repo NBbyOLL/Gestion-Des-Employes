@@ -53,6 +53,9 @@
             adminSales = new Guna.UI2.WinForms.Guna2Button();
             adminLogout = new Guna.UI2.WinForms.Guna2Button();
             panel2 = new Panel();
+            sqlDataAdapter1 = new Microsoft.Data.SqlClient.SqlDataAdapter();
+            sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
+            guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -80,14 +83,14 @@
             panel1.Location = new Point(-4, 0);
             panel1.Margin = new Padding(5, 3, 5, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1250, 40);
+            panel1.Size = new Size(1290, 40);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(1207, 0);
+            pictureBox2.Location = new Point(1236, 0);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(40, 37);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -98,9 +101,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(140, 37);
+            pictureBox1.Location = new Point(116, 8);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(66, 62);
+            pictureBox1.Size = new Size(94, 91);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -119,7 +122,7 @@
             adminDashboard.FocusedColor = Color.FromArgb(64, 64, 64);
             adminDashboard.Font = new Font("Segoe UI", 9F);
             adminDashboard.ForeColor = Color.White;
-            adminDashboard.Location = new Point(84, 202);
+            adminDashboard.Location = new Point(71, 217);
             adminDashboard.Name = "adminDashboard";
             adminDashboard.ShadowDecoration.CustomizableEdges = customizableEdges2;
             adminDashboard.Size = new Size(205, 40);
@@ -133,7 +136,7 @@
             textBox2.BorderStyle = BorderStyle.None;
             textBox2.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBox2.ForeColor = Color.White;
-            textBox2.Location = new Point(51, 118);
+            textBox2.Location = new Point(83, 123);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(205, 27);
             textBox2.TabIndex = 2;
@@ -153,7 +156,7 @@
             adminEmployees.FillColor = Color.Transparent;
             adminEmployees.Font = new Font("Segoe UI", 9F);
             adminEmployees.ForeColor = Color.White;
-            adminEmployees.Location = new Point(84, 262);
+            adminEmployees.Location = new Point(71, 277);
             adminEmployees.Name = "adminEmployees";
             adminEmployees.ShadowDecoration.CustomizableEdges = customizableEdges4;
             adminEmployees.Size = new Size(205, 40);
@@ -174,7 +177,7 @@
             adminExpense.FillColor = Color.Transparent;
             adminExpense.Font = new Font("Segoe UI", 9F);
             adminExpense.ForeColor = Color.White;
-            adminExpense.Location = new Point(84, 323);
+            adminExpense.Location = new Point(71, 338);
             adminExpense.Name = "adminExpense";
             adminExpense.ShadowDecoration.CustomizableEdges = customizableEdges6;
             adminExpense.Size = new Size(205, 40);
@@ -194,7 +197,7 @@
             adminClients.FillColor = Color.Transparent;
             adminClients.Font = new Font("Segoe UI", 9F);
             adminClients.ForeColor = Color.White;
-            adminClients.Location = new Point(84, 382);
+            adminClients.Location = new Point(71, 397);
             adminClients.Name = "adminClients";
             adminClients.ShadowDecoration.CustomizableEdges = customizableEdges8;
             adminClients.Size = new Size(205, 40);
@@ -214,7 +217,7 @@
             adminSales.FillColor = Color.Transparent;
             adminSales.Font = new Font("Segoe UI", 9F);
             adminSales.ForeColor = Color.White;
-            adminSales.Location = new Point(84, 443);
+            adminSales.Location = new Point(71, 458);
             adminSales.Name = "adminSales";
             adminSales.ShadowDecoration.CustomizableEdges = customizableEdges10;
             adminSales.Size = new Size(205, 40);
@@ -234,7 +237,7 @@
             adminLogout.FillColor = Color.Transparent;
             adminLogout.Font = new Font("Segoe UI", 9F);
             adminLogout.ForeColor = Color.White;
-            adminLogout.Location = new Point(84, 838);
+            adminLogout.Location = new Point(71, 741);
             adminLogout.Name = "adminLogout";
             adminLogout.ShadowDecoration.CustomizableEdges = customizableEdges12;
             adminLogout.Size = new Size(205, 40);
@@ -256,15 +259,35 @@
             panel2.Location = new Point(-4, 38);
             panel2.Margin = new Padding(5, 3, 5, 3);
             panel2.Name = "panel2";
-            panel2.Size = new Size(366, 936);
+            panel2.Size = new Size(350, 936);
             panel2.TabIndex = 1;
             panel2.Paint += panel2_Paint;
+            // 
+            // sqlCommand1
+            // 
+            sqlCommand1.CommandTimeout = 30;
+            sqlCommand1.EnableOptimizedParameterBinding = false;
+            // 
+            // guna2ContextMenuStrip1
+            // 
+            guna2ContextMenuStrip1.ImageScalingSize = new Size(20, 20);
+            guna2ContextMenuStrip1.Name = "guna2ContextMenuStrip1";
+            guna2ContextMenuStrip1.RenderStyle.ArrowColor = Color.FromArgb(151, 143, 255);
+            guna2ContextMenuStrip1.RenderStyle.BorderColor = Color.Gainsboro;
+            guna2ContextMenuStrip1.RenderStyle.ColorTable = null;
+            guna2ContextMenuStrip1.RenderStyle.RoundedEdges = true;
+            guna2ContextMenuStrip1.RenderStyle.SelectionArrowColor = Color.White;
+            guna2ContextMenuStrip1.RenderStyle.SelectionBackColor = Color.FromArgb(100, 88, 255);
+            guna2ContextMenuStrip1.RenderStyle.SelectionForeColor = Color.White;
+            guna2ContextMenuStrip1.RenderStyle.SeparatorColor = Color.Gainsboro;
+            guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            guna2ContextMenuStrip1.Size = new Size(61, 4);
             // 
             // adminDaashboard
             // 
             AutoScaleDimensions = new SizeF(13F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1245, 961);
+            ClientSize = new Size(1284, 848);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -294,5 +317,28 @@
         private Guna.UI2.WinForms.Guna2Button adminSales;
         private Guna.UI2.WinForms.Guna2Button adminLogout;
         private Panel panel2;
+        private Microsoft.Data.SqlClient.SqlDataAdapter sqlDataAdapter1;
+        private Label employeeCin;
+        private Guna.UI2.WinForms.Guna2TextBox boxCin;
+        private Label employeefirstName;
+        private Guna.UI2.WinForms.Guna2TextBox boxFirstName;
+        private Label employeeBirth;
+        private Guna.UI2.WinForms.Guna2TextBox boxBirth;
+        private Guna.UI2.WinForms.Guna2Button buttonSave;
+        private Guna.UI2.WinForms.Guna2DataGridView DataGridView;
+        private Guna.UI2.WinForms.Guna2Button boxDelete;
+        private Guna.UI2.WinForms.Guna2Button boxUpdate;
+        private Label employeePhone;
+        private Guna.UI2.WinForms.Guna2TextBox boxphoneNumber;
+        private Label employeeSalary;
+        private Guna.UI2.WinForms.Guna2TextBox boxSalary;
+        private Label employeeAdress;
+        private Guna.UI2.WinForms.Guna2TextBox boxAddress;
+        private Label employeelastName;
+        private Guna.UI2.WinForms.Guna2TextBox boxlastName;
+        private Microsoft.Data.SqlClient.SqlCommand sqlCommand1;
+        private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip1;
+        private Guna.UI2.WinForms.Guna2Button buttonAdd;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
     }
 }

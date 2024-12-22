@@ -104,7 +104,7 @@ namespace Project_dotNet.Forms
         {
             SqlConnection connect = new SqlConnection(@"Data Source=localhost\SQLEXPRESS;Initial Catalog=winformdb;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
             connect.Open();
-            SqlCommand cmd = new SqlCommand("select TOP 1 * from employees ", connect);
+            SqlCommand cmd = new SqlCommand("select * from employees ;", connect);
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             DataTable table = new DataTable();
             adapter.Fill(table);
@@ -113,6 +113,7 @@ namespace Project_dotNet.Forms
 
         private void addEmployees_Load(object sender, EventArgs e)
         {
+            RefreshDataGridView();
 
         }
 
@@ -120,16 +121,20 @@ namespace Project_dotNet.Forms
         {
             SqlConnection connect = new SqlConnection(@"Data Source=localhost\SQLEXPRESS;Initial Catalog=winformdb;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
             connect.Open();
-            SqlCommand cmd = new SqlCommand("INSERT INTO employees VALUES (@firstName, @lastName, @address, @salary, @dateBirth, @phoneNumber)", connect);
+            SqlCommand cmd = new SqlCommand("INSERT INTO employees VALUES (@firstName, @lastName, @address, @salary, @dateBirth, @phoneNumber, @CIN)", connect);
             cmd.Parameters.AddWithValue("@firstName", boxFirstName.Text);
             cmd.Parameters.AddWithValue("@lastName", boxlastName.Text);
             cmd.Parameters.AddWithValue("@address", boxAddress.Text);
             cmd.Parameters.AddWithValue("@salary", Convert.ToDouble(boxSalary.Text));
             cmd.Parameters.AddWithValue("@dateBirth", boxBirth.Text);
             cmd.Parameters.AddWithValue("@phoneNumber", boxphoneNumber.Text);
+            cmd.Parameters.AddWithValue("@CIN", boxCin.Text);
+
             cmd.ExecuteNonQuery();
             connect.Close();
             MessageBox.Show("Employee Saved successfully");
+            RefreshDataGridView();
+
         }
 
         private void boxSalary_TextChanged(object sender, EventArgs e)
@@ -141,16 +146,31 @@ namespace Project_dotNet.Forms
         {
             SqlConnection connect = new SqlConnection(@"Data Source=localhost\SQLEXPRESS;Initial Catalog=winformdb;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
             connect.Open();
-            SqlCommand cmd = new SqlCommand("update employees set firstNname=@firstName, lastNname=@lastName, address=@address, salary=@salary, dateBirth=@dateBirth, phoneNumber=@phoneNumber where lastName=@lastName)", connect);
-            cmd.Parameters.AddWithValue("@firstName", boxId.Text);
+            SqlCommand cmd = new SqlCommand("update employees set firstName=@firstName, lastName=@lastName, address=@address, salary=@salary, dateBirth=@dateBirth, phoneNumber=@phoneNumber where CIN=@CIN", connect);
+            cmd.Parameters.AddWithValue("@firstName", boxFirstName.Text);
             cmd.Parameters.AddWithValue("@lastName", boxlastName.Text);
             cmd.Parameters.AddWithValue("@address", boxAddress.Text);
             cmd.Parameters.AddWithValue("@salary", Convert.ToDouble(boxSalary.Text));
             cmd.Parameters.AddWithValue("@dateBirth", boxBirth.Text);
             cmd.Parameters.AddWithValue("@phoneNumber", boxphoneNumber.Text);
+            cmd.Parameters.AddWithValue("@CIN", boxCin.Text);
             cmd.ExecuteNonQuery();
             connect.Close();
             MessageBox.Show("Employee Updated successfully");
+
+            RefreshDataGridView();
+
+        }
+        private void RefreshDataGridView()
+        {
+            SqlConnection connect = new SqlConnection(@"Data Source=localhost\SQLEXPRESS;Initial Catalog=winformdb;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
+            connect.Open();
+            SqlCommand cmd = new SqlCommand("select * from employees;", connect);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            DataGridView.DataSource = table;
+            connect.Close();
         }
 
         private void label2_Click_1(object sender, EventArgs e)
@@ -167,14 +187,28 @@ namespace Project_dotNet.Forms
         {
             SqlConnection connect = new SqlConnection(@"Data Source=localhost\SQLEXPRESS;Initial Catalog=winformdb;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
             connect.Open();
-            SqlCommand cmd = new SqlCommand("delete employees where lastName=@lastName ", connect);
-            cmd.Parameters.AddWithValue("@lastName", boxlastName.Text);
+            SqlCommand cmd = new SqlCommand("delete employees where CIN=@CIN ", connect);
+            cmd.Parameters.AddWithValue("@CIN", boxCin.Text);
+
             cmd.ExecuteNonQuery();
             connect.Close();
             MessageBox.Show("Employee Deleted successfully");
+            RefreshDataGridView();
+
         }
 
+
         private void DataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
