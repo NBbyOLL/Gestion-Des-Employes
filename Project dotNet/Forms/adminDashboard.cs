@@ -73,5 +73,19 @@ namespace Project_dotNet.Forms
         {
 
         }
+
+        private void adminExpense_Click(object sender, EventArgs e)
+        {
+            Cnss cnss = new Cnss();
+            cnss.Show();
+            this.Hide();
+        }
+
+        private void adminClients_Click(object sender, EventArgs e)
+        {
+            vacation vacation = new vacation();
+            vacation.Show();
+            this.Hide();
+        }
     }
 }

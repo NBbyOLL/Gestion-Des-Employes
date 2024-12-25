@@ -19,7 +19,7 @@ namespace Project_dotNet
         {
             InitializeComponent();
 
-            connect = new SqlConnection(@"Data Source=localhost\SQLEXPRESS;Initial Catalog=winformdb;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
+            connect = new SqlConnection(@"Data Source=ALOUAHAPC\SQLEXPRESS;Initial Catalog=GestionDesEmployee;Integrated Security=True;Pooling=False;Encrypt=True;Trust Server Certificate=True");
 
 
 

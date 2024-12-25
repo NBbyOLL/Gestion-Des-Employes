@@ -48,7 +48,7 @@
             adminDashboard = new Guna.UI2.WinForms.Guna2Button();
             textBox2 = new TextBox();
             adminEmployees = new Guna.UI2.WinForms.Guna2Button();
-            adminExpense = new Guna.UI2.WinForms.Guna2Button();
+            adminCnss = new Guna.UI2.WinForms.Guna2Button();
             adminClients = new Guna.UI2.WinForms.Guna2Button();
             adminSales = new Guna.UI2.WinForms.Guna2Button();
             adminLogout = new Guna.UI2.WinForms.Guna2Button();
@@ -164,25 +164,26 @@
             adminEmployees.Text = "Employee Management";
             adminEmployees.Click += guna2Button2_Click;
             // 
-            // adminExpense
+            // adminCnss
             // 
-            adminExpense.BorderColor = Color.White;
-            adminExpense.BorderRadius = 10;
-            adminExpense.BorderThickness = 1;
-            adminExpense.CustomizableEdges = customizableEdges5;
-            adminExpense.DisabledState.BorderColor = Color.DarkGray;
-            adminExpense.DisabledState.CustomBorderColor = Color.DarkGray;
-            adminExpense.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            adminExpense.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            adminExpense.FillColor = Color.Transparent;
-            adminExpense.Font = new Font("Segoe UI", 9F);
-            adminExpense.ForeColor = Color.White;
-            adminExpense.Location = new Point(71, 338);
-            adminExpense.Name = "adminExpense";
-            adminExpense.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            adminExpense.Size = new Size(205, 40);
-            adminExpense.TabIndex = 4;
-            adminExpense.Text = "Expense Management";
+            adminCnss.BorderColor = Color.White;
+            adminCnss.BorderRadius = 10;
+            adminCnss.BorderThickness = 1;
+            adminCnss.CustomizableEdges = customizableEdges5;
+            adminCnss.DisabledState.BorderColor = Color.DarkGray;
+            adminCnss.DisabledState.CustomBorderColor = Color.DarkGray;
+            adminCnss.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            adminCnss.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            adminCnss.FillColor = Color.Transparent;
+            adminCnss.Font = new Font("Segoe UI", 9F);
+            adminCnss.ForeColor = Color.White;
+            adminCnss.Location = new Point(71, 338);
+            adminCnss.Name = "adminCnss";
+            adminCnss.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            adminCnss.Size = new Size(205, 40);
+            adminCnss.TabIndex = 4;
+            adminCnss.Text = "Declaration CNSS";
+            adminCnss.Click += adminExpense_Click;
             // 
             // adminClients
             // 
@@ -202,7 +203,8 @@
             adminClients.ShadowDecoration.CustomizableEdges = customizableEdges8;
             adminClients.Size = new Size(205, 40);
             adminClients.TabIndex = 5;
-            adminClients.Text = "Clients Management";
+            adminClients.Text = " Vacation Management";
+            adminClients.Click += adminClients_Click;
             // 
             // adminSales
             // 
@@ -251,7 +253,7 @@
             panel2.Controls.Add(adminLogout);
             panel2.Controls.Add(adminSales);
             panel2.Controls.Add(adminClients);
-            panel2.Controls.Add(adminExpense);
+            panel2.Controls.Add(adminCnss);
             panel2.Controls.Add(adminEmployees);
             panel2.Controls.Add(textBox2);
             panel2.Controls.Add(adminDashboard);
@@ -312,7 +314,7 @@
         private Guna.UI2.WinForms.Guna2Button adminDashboard;
         private TextBox textBox2;
         private Guna.UI2.WinForms.Guna2Button adminEmployees;
-        private Guna.UI2.WinForms.Guna2Button adminExpense;
+        private Guna.UI2.WinForms.Guna2Button adminCnss;
         private Guna.UI2.WinForms.Guna2Button adminClients;
         private Guna.UI2.WinForms.Guna2Button adminSales;
         private Guna.UI2.WinForms.Guna2Button adminLogout;
