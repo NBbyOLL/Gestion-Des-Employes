@@ -49,6 +49,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(addEmployees));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -61,11 +62,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(addEmployees));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
             employeeSalary = new Label();
@@ -83,8 +81,12 @@
             boxCin = new Guna.UI2.WinForms.Guna2TextBox();
             guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             panel2 = new Panel();
+            pictureBox8 = new PictureBox();
+            pictureBox7 = new PictureBox();
+            pictureBox6 = new PictureBox();
+            pictureBox5 = new PictureBox();
+            pictureBox4 = new PictureBox();
             adminLogout = new Guna.UI2.WinForms.Guna2Button();
-            adminSales = new Guna.UI2.WinForms.Guna2Button();
             adminClients = new Guna.UI2.WinForms.Guna2Button();
             adminCnss = new Guna.UI2.WinForms.Guna2Button();
             adminEmployees = new Guna.UI2.WinForms.Guna2Button();
@@ -103,6 +105,11 @@
             employeeTypeBox = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)DataGridView).BeginInit();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -426,6 +433,7 @@
             boxCin.ShadowDecoration.CustomizableEdges = customizableEdges16;
             boxCin.Size = new Size(238, 35);
             boxCin.TabIndex = 31;
+            boxCin.TextChanged += boxCin_TextChanged;
             // 
             // guna2TextBox1
             // 
@@ -448,6 +456,7 @@
             guna2TextBox1.Name = "guna2TextBox1";
             guna2TextBox1.PasswordChar = '\0';
             guna2TextBox1.PlaceholderText = "";
+            guna2TextBox1.ReadOnly = true;
             guna2TextBox1.SelectedText = "";
             guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges18;
             guna2TextBox1.Size = new Size(890, 369);
@@ -457,8 +466,12 @@
             // panel2
             // 
             panel2.BackColor = Color.MidnightBlue;
+            panel2.Controls.Add(pictureBox8);
+            panel2.Controls.Add(pictureBox7);
+            panel2.Controls.Add(pictureBox6);
+            panel2.Controls.Add(pictureBox5);
+            panel2.Controls.Add(pictureBox4);
             panel2.Controls.Add(adminLogout);
-            panel2.Controls.Add(adminSales);
             panel2.Controls.Add(adminClients);
             panel2.Controls.Add(adminCnss);
             panel2.Controls.Add(adminEmployees);
@@ -471,11 +484,60 @@
             panel2.Size = new Size(350, 936);
             panel2.TabIndex = 35;
             // 
+            // pictureBox8
+            // 
+            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
+            pictureBox8.Location = new Point(16, 750);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(55, 25);
+            pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox8.TabIndex = 27;
+            pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
+            pictureBox7.Location = new Point(16, 405);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(55, 25);
+            pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox7.TabIndex = 17;
+            pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
+            pictureBox6.Location = new Point(16, 345);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(55, 25);
+            pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox6.TabIndex = 16;
+            pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.Location = new Point(16, 288);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(55, 25);
+            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox5.TabIndex = 15;
+            pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(35, 226);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(41, 25);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabIndex = 14;
+            pictureBox4.TabStop = false;
+            // 
             // adminLogout
             // 
             adminLogout.BorderColor = Color.White;
             adminLogout.BorderRadius = 10;
-            adminLogout.BorderThickness = 1;
             adminLogout.CustomizableEdges = customizableEdges19;
             adminLogout.DisabledState.BorderColor = Color.DarkGray;
             adminLogout.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -490,68 +552,51 @@
             adminLogout.Size = new Size(205, 40);
             adminLogout.TabIndex = 8;
             adminLogout.Text = "Logout";
+            adminLogout.TextAlign = HorizontalAlignment.Left;
             adminLogout.Click += adminLogout_Click;
-            // 
-            // adminSales
-            // 
-            adminSales.BorderColor = Color.White;
-            adminSales.BorderRadius = 10;
-            adminSales.BorderThickness = 1;
-            adminSales.CustomizableEdges = customizableEdges21;
-            adminSales.DisabledState.BorderColor = Color.DarkGray;
-            adminSales.DisabledState.CustomBorderColor = Color.DarkGray;
-            adminSales.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            adminSales.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            adminSales.FillColor = Color.Transparent;
-            adminSales.Font = new Font("Segoe UI", 9F);
-            adminSales.ForeColor = Color.White;
-            adminSales.Location = new Point(71, 458);
-            adminSales.Name = "adminSales";
-            adminSales.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            adminSales.Size = new Size(205, 40);
-            adminSales.TabIndex = 7;
-            adminSales.Text = "Sales Management";
             // 
             // adminClients
             // 
             adminClients.BorderColor = Color.White;
             adminClients.BorderRadius = 10;
-            adminClients.BorderThickness = 1;
-            adminClients.CustomizableEdges = customizableEdges23;
+            adminClients.CustomizableEdges = customizableEdges21;
             adminClients.DisabledState.BorderColor = Color.DarkGray;
             adminClients.DisabledState.CustomBorderColor = Color.DarkGray;
             adminClients.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             adminClients.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             adminClients.FillColor = Color.Transparent;
+            adminClients.FocusedColor = Color.Silver;
             adminClients.Font = new Font("Segoe UI", 9F);
             adminClients.ForeColor = Color.White;
             adminClients.Location = new Point(71, 397);
             adminClients.Name = "adminClients";
-            adminClients.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            adminClients.ShadowDecoration.CustomizableEdges = customizableEdges22;
             adminClients.Size = new Size(205, 40);
             adminClients.TabIndex = 5;
             adminClients.Text = " Vacation Management";
+            adminClients.TextAlign = HorizontalAlignment.Left;
             adminClients.Click += adminClients_Click;
             // 
             // adminCnss
             // 
             adminCnss.BorderColor = Color.White;
             adminCnss.BorderRadius = 10;
-            adminCnss.BorderThickness = 1;
-            adminCnss.CustomizableEdges = customizableEdges25;
+            adminCnss.CustomizableEdges = customizableEdges23;
             adminCnss.DisabledState.BorderColor = Color.DarkGray;
             adminCnss.DisabledState.CustomBorderColor = Color.DarkGray;
             adminCnss.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             adminCnss.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             adminCnss.FillColor = Color.Transparent;
+            adminCnss.FocusedColor = Color.Silver;
             adminCnss.Font = new Font("Segoe UI", 9F);
             adminCnss.ForeColor = Color.White;
             adminCnss.Location = new Point(71, 338);
             adminCnss.Name = "adminCnss";
-            adminCnss.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            adminCnss.ShadowDecoration.CustomizableEdges = customizableEdges24;
             adminCnss.Size = new Size(205, 40);
             adminCnss.TabIndex = 4;
             adminCnss.Text = "Declaration CNSS";
+            adminCnss.TextAlign = HorizontalAlignment.Left;
             adminCnss.Click += adminCnss_Click;
             // 
             // adminEmployees
@@ -559,21 +604,22 @@
             adminEmployees.BackColor = Color.Transparent;
             adminEmployees.BorderColor = Color.Aquamarine;
             adminEmployees.BorderRadius = 10;
-            adminEmployees.BorderThickness = 3;
-            adminEmployees.CustomizableEdges = customizableEdges27;
+            adminEmployees.CustomizableEdges = customizableEdges25;
             adminEmployees.DisabledState.BorderColor = Color.DarkGray;
             adminEmployees.DisabledState.CustomBorderColor = Color.DarkGray;
             adminEmployees.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             adminEmployees.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             adminEmployees.FillColor = Color.Transparent;
-            adminEmployees.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            adminEmployees.FocusedColor = Color.Silver;
+            adminEmployees.Font = new Font("Segoe UI", 9F);
             adminEmployees.ForeColor = Color.White;
             adminEmployees.Location = new Point(71, 277);
             adminEmployees.Name = "adminEmployees";
-            adminEmployees.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            adminEmployees.ShadowDecoration.CustomizableEdges = customizableEdges26;
             adminEmployees.Size = new Size(205, 40);
             adminEmployees.TabIndex = 3;
             adminEmployees.Text = "Employee Management";
+            adminEmployees.TextAlign = HorizontalAlignment.Left;
             // 
             // textBox2
             // 
@@ -591,22 +637,23 @@
             // 
             adminDashboard.BorderColor = Color.White;
             adminDashboard.BorderRadius = 10;
-            adminDashboard.BorderThickness = 1;
-            adminDashboard.CustomizableEdges = customizableEdges29;
+            adminDashboard.CustomizableEdges = customizableEdges27;
             adminDashboard.DisabledState.BorderColor = Color.DarkGray;
             adminDashboard.DisabledState.CustomBorderColor = Color.DarkGray;
             adminDashboard.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             adminDashboard.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             adminDashboard.FillColor = Color.Transparent;
-            adminDashboard.FocusedColor = Color.FromArgb(64, 64, 64);
+            adminDashboard.FocusedColor = Color.Silver;
             adminDashboard.Font = new Font("Segoe UI", 9F);
             adminDashboard.ForeColor = Color.White;
             adminDashboard.Location = new Point(71, 217);
             adminDashboard.Name = "adminDashboard";
-            adminDashboard.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            adminDashboard.ShadowDecoration.CustomizableEdges = customizableEdges28;
             adminDashboard.Size = new Size(205, 40);
             adminDashboard.TabIndex = 1;
             adminDashboard.Text = "Dashboard";
+            adminDashboard.TextAlign = HorizontalAlignment.Left;
+            adminDashboard.Click += adminDashboard_Click;
             // 
             // pictureBox1
             // 
@@ -718,7 +765,7 @@
             Import.BorderRadius = 6;
             Import.BorderThickness = 1;
             Import.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            Import.CustomizableEdges = customizableEdges31;
+            Import.CustomizableEdges = customizableEdges29;
             Import.DisabledState.BorderColor = Color.DarkGray;
             Import.DisabledState.CustomBorderColor = Color.DarkGray;
             Import.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -728,7 +775,7 @@
             Import.ForeColor = Color.White;
             Import.Location = new Point(1056, 321);
             Import.Name = "Import";
-            Import.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            Import.ShadowDecoration.CustomizableEdges = customizableEdges30;
             Import.Size = new Size(162, 34);
             Import.TabIndex = 42;
             Import.Text = "Import";
@@ -739,7 +786,7 @@
             employeeTypeBox.BackColor = Color.Transparent;
             employeeTypeBox.BorderColor = Color.White;
             employeeTypeBox.BorderRadius = 1;
-            employeeTypeBox.CustomizableEdges = customizableEdges33;
+            employeeTypeBox.CustomizableEdges = customizableEdges31;
             employeeTypeBox.DrawMode = DrawMode.OwnerDrawFixed;
             employeeTypeBox.DropDownStyle = ComboBoxStyle.DropDownList;
             employeeTypeBox.FillColor = Color.DimGray;
@@ -751,7 +798,7 @@
             employeeTypeBox.Items.AddRange(new object[] { "Manager", "Agent", "Secretary", "Accountant", "Human Resources " });
             employeeTypeBox.Location = new Point(540, 229);
             employeeTypeBox.Name = "employeeTypeBox";
-            employeeTypeBox.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            employeeTypeBox.ShadowDecoration.CustomizableEdges = customizableEdges32;
             employeeTypeBox.Size = new Size(238, 36);
             employeeTypeBox.TabIndex = 43;
             employeeTypeBox.SelectedIndexChanged += employeeTypeBox_SelectedIndexChanged;
@@ -789,6 +836,11 @@
             ((System.ComponentModel.ISupportInitialize)DataGridView).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
@@ -823,7 +875,6 @@
         private Label label1;
         private Panel panel2;
         private Guna.UI2.WinForms.Guna2Button adminLogout;
-        private Guna.UI2.WinForms.Guna2Button adminSales;
         private Guna.UI2.WinForms.Guna2Button adminClients;
         private Guna.UI2.WinForms.Guna2Button adminCnss;
         private Guna.UI2.WinForms.Guna2Button adminEmployees;
@@ -837,5 +888,10 @@
         private PictureBox BoxPic;
         private Guna.UI2.WinForms.Guna2Button Import;
         private Guna.UI2.WinForms.Guna2ComboBox employeeTypeBox;
+        private PictureBox pictureBox7;
+        private PictureBox pictureBox6;
+        private PictureBox pictureBox5;
+        private PictureBox pictureBox4;
+        private PictureBox pictureBox8;
     }
 }

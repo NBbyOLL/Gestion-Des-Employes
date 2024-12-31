@@ -172,8 +172,29 @@ namespace Project_dotNet.Forms
         }
 
         private void boxDelete_Click(object sender, EventArgs e)
+
         {
 
+            SqlConnection connect = new SqlConnection(@"Data Source=ALOUAHAPC\SQLEXPRESS;Initial Catalog=GestionDesEmployee;Integrated Security=True;Pooling=False;Encrypt=True;Trust Server Certificate=True");
+            connect.Open();
+            SqlCommand cmd = new SqlCommand("delete Vacation where CIN=@CIN ", connect);
+            cmd.Parameters.AddWithValue("@CIN", Boxvacationcin.Text);
+            cmd.ExecuteNonQuery();
+            connect.Close();
+            MessageBox.Show("Employee deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private void Boxvacationcin_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void adminDashboard_Click(object sender, EventArgs e)
+        {
+            adminDaashboard adminDaashboard = new adminDaashboard();
+            adminDaashboard.Show();
+            this.Hide();
         }
     }
 }

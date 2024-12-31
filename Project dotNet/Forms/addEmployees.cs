@@ -339,6 +339,18 @@ namespace Project_dotNet.Forms
             vacation.Show();
             this.Hide();
         }
+
+        private void boxCin_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void adminDashboard_Click(object sender, EventArgs e)
+        {
+            adminDaashboard adminDaashboard = new adminDaashboard();
+            adminDaashboard.Show();
+            this.Hide();
+        }
     }
 }
 

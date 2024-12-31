@@ -15,6 +15,8 @@ namespace Project_dotNet.Forms
 {
     public partial class Cnss : Form
     {
+        public const decimal EmployerContributionPercentage = 0.1819m; // 18.19%
+
         private SqlConnection connect;
 
         public Cnss()
@@ -88,13 +90,12 @@ namespace Project_dotNet.Forms
 
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)//button submit
+        private void guna2Button1_Click(object sender, EventArgs e) // Button submit
         {
             string connectionString = @"Data Source=ALOUAHAPC\SQLEXPRESS;Initial Catalog=GestionDesEmployee;Integrated Security=True;Pooling=False;Encrypt=True;Trust Server Certificate=True";
             {
                 // Retrieve input values
                 string cin = BoxCinCNSS.Text.Trim();
-                decimal totalAmount = cnssUpDown.Value; // Assuming cnssUpDown is the NumericUpDown control
                 DateTime declarationDate = cnssimePicker.Value; // Assuming cnssDatePicker is the DateTimePicker control
 
                 if (string.IsNullOrEmpty(cin))
@@ -102,79 +103,100 @@ namespace Project_dotNet.Forms
                     MessageBox.Show("CIN is required.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+
                 using (SqlConnection connect = new SqlConnection(connectionString))
                 {
                     try
                     {
                         connect.Open();
 
-                        // Check if CIN exists in Employees table
-                        string checkCINQuery = "SELECT COUNT(1) FROM Employees WHERE CIN = @CIN";
-                        SqlCommand checkCmd = new SqlCommand(checkCINQuery, connect);
-                        checkCmd.Parameters.AddWithValue("@CIN", cin);
+                        // Fetch the salary of the employee
+                        string salaryQuery = "SELECT Salary FROM Employees WHERE CIN = @CIN";
+                        SqlCommand salaryCmd = new SqlCommand(salaryQuery, connect);
+                        salaryCmd.Parameters.AddWithValue("@CIN", cin);
 
-                        int exists = (int)checkCmd.ExecuteScalar();
-
-                        if (exists > 0)
+                        object result = salaryCmd.ExecuteScalar();
+                        if (result == null || result == DBNull.Value)
                         {
-                            // Insert CNSS record
-                            string insertQuery = "INSERT INTO CNSS (CIN, TotalAmount, DeclarationDate) VALUES (@CIN, @TotalAmount, @DeclarationDate)";
-                            SqlCommand cmd = new SqlCommand(insertQuery, connect);
-                            cmd.Parameters.AddWithValue("@CIN", cin);
-                            cmd.Parameters.AddWithValue("@TotalAmount", totalAmount);
-                            cmd.Parameters.AddWithValue("@DeclarationDate", declarationDate);
+                            MessageBox.Show("Salary not found for the employee. Please verify the CIN.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
 
-                            cmd.ExecuteNonQuery();
+                        decimal salary = Convert.ToDecimal(result);
 
-                            MessageBox.Show("Record inserted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        // Calculate contributions
+                        decimal employeeContribution = salary * 0.0429m; // 4.29%
+                        decimal employerContribution = salary * 0.1819m; // 18.19%
+                        decimal totalAmount = employeeContribution + employerContribution;
+
+                        // Check if a record already exists for this CIN and month
+                        string checkRecordQuery = @"SELECT COUNT(1) FROM CNSS 
+                                            WHERE CIN = @CIN 
+                                              AND MONTH(DeclarationDate) = MONTH(@DeclarationDate) 
+                                              AND YEAR(DeclarationDate) = YEAR(@DeclarationDate)";
+                        SqlCommand checkRecordCmd = new SqlCommand(checkRecordQuery, connect);
+                        checkRecordCmd.Parameters.AddWithValue("@CIN", cin);
+                        checkRecordCmd.Parameters.AddWithValue("@DeclarationDate", declarationDate);
+
+                        int recordExists = (int)checkRecordCmd.ExecuteScalar();
+
+                        if (recordExists > 0)
+                        {
+                            // Delete the existing record
+                            string deleteQuery = @"DELETE FROM CNSS 
+                           WHERE CIN = @CIN 
+                             AND MONTH(DeclarationDate) = MONTH(@DeclarationDate) 
+                             AND YEAR(DeclarationDate) = YEAR(@DeclarationDate)";
+                            SqlCommand deleteCmd = new SqlCommand(deleteQuery, connect);
+                            deleteCmd.Parameters.AddWithValue("@CIN", cin);
+                            deleteCmd.Parameters.AddWithValue("@DeclarationDate", declarationDate);
+
+                            deleteCmd.ExecuteNonQuery();
+
+                            // Insert new record with calculated contributions
+                            string insertQuery = @"INSERT INTO CNSS (CIN, TotalAmount, DeclarationDate, EmployerContribution, EmployeeContribution) 
+                           VALUES (@CIN, @TotalAmount, @DeclarationDate, @EmployerContribution, @EmployeeContribution)";
+                            SqlCommand insertCmd = new SqlCommand(insertQuery, connect);
+                            insertCmd.Parameters.AddWithValue("@CIN", cin);
+                            insertCmd.Parameters.AddWithValue("@TotalAmount", totalAmount);
+                            insertCmd.Parameters.AddWithValue("@DeclarationDate", declarationDate);
+                            insertCmd.Parameters.AddWithValue("@EmployerContribution", employerContribution);
+                            insertCmd.Parameters.AddWithValue("@EmployeeContribution", employeeContribution);
+
+                            insertCmd.ExecuteNonQuery();
+
+                            MessageBox.Show("Record updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                         }
                         else
                         {
-                            MessageBox.Show("CIN does not exist in the Employees table.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            // Insert new record with calculated contributions
+                            string insertQuery = @"INSERT INTO CNSS (CIN, TotalAmount, DeclarationDate, EmployerContribution, EmployeeContribution) 
+                                           VALUES (@CIN, @TotalAmount, @DeclarationDate, @EmployerContribution, @EmployeeContribution)";
+                            SqlCommand insertCmd = new SqlCommand(insertQuery, connect);
+                            insertCmd.Parameters.AddWithValue("@CIN", cin);
+                            insertCmd.Parameters.AddWithValue("@TotalAmount", totalAmount);
+                            insertCmd.Parameters.AddWithValue("@DeclarationDate", declarationDate);
+                            insertCmd.Parameters.AddWithValue("@EmployerContribution", employerContribution);
+                            insertCmd.Parameters.AddWithValue("@EmployeeContribution", employeeContribution);
+
+                            insertCmd.ExecuteNonQuery();
+
+                            MessageBox.Show("Record inserted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+                    LoadCNSSData();
+
                 }
             }
         }
 
-        private void DisplayMonthlyData(SqlConnection connect)
-        {
-            try
-            {
-                // Query for Total Declarations, Total Amount, and Average Amount for the current month
-                string totalDeclarationsQuery = "SELECT COUNT(*) FROM CNSS WHERE MONTH(DeclarationDate) = MONTH(GETDATE()) AND YEAR(DeclarationDate) = YEAR(GETDATE())";
-                SqlCommand totalDeclarationsCmd = new SqlCommand(totalDeclarationsQuery, connect);
-                int totalDeclarations = (int)totalDeclarationsCmd.ExecuteScalar();
 
-                string totalAmountQuery = "SELECT SUM(TotalAmount) FROM CNSS WHERE MONTH(DeclarationDate) = MONTH(GETDATE()) AND YEAR(DeclarationDate) = YEAR(GETDATE())";
-                SqlCommand totalAmountCmd = new SqlCommand(totalAmountQuery, connect);
-                decimal totalAmountForMonth = (decimal)totalAmountCmd.ExecuteScalar();
 
-                string averageAmountQuery = "SELECT AVG(TotalAmount) FROM CNSS WHERE MONTH(DeclarationDate) = MONTH(GETDATE()) AND YEAR(DeclarationDate) = YEAR(GETDATE())";
-                SqlCommand averageAmountCmd = new SqlCommand(averageAmountQuery, connect);
-                decimal averageAmount = (decimal)averageAmountCmd.ExecuteScalar();
-
-                // Update DataGridViews
-                dataGridTotalDeclaration.Rows.Clear(); // Clear previous rows if any
-                dataGridTotalAmount.Rows.Clear();
-                dataGridAverageAmount.Rows.Clear();
-                dataGridThisMonth.Rows.Clear();
-
-                // Add the results to the respective DataGridViews
-                dataGridTotalDeclaration.Rows.Add(new object[] { "Total Declarations", totalDeclarations });
-                dataGridTotalAmount.Rows.Add(new object[] { "Total Amount", totalAmountForMonth });
-                dataGridAverageAmount.Rows.Add(new object[] { "Average Amount", averageAmount });
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred while fetching data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
 
 
         private void dataGridTotalAmount_CellContentClick(object sender, DataGridViewCellEventArgs e)//data Grid TotalAmount
@@ -199,6 +221,136 @@ namespace Project_dotNet.Forms
             vacation vacation = new vacation();
             vacation.Show();
             this.Hide();
+        }
+
+        private void label3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+            // Set the Employer Contribution TextBox to read-only
+            textboxEmployerContribution.ReadOnly = true;
+
+            // Set the default value to "18.19%" as a constant display
+            textboxEmployerContribution.Text = (EmployerContributionPercentage * 100).ToString("F2") + "%";
+        }
+
+        private void CNSSDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string connectionString = @"Data Source=ALOUAHAPC\SQLEXPRESS;Initial Catalog=GestionDesEmployee;Integrated Security=True;Pooling=False;Encrypt=True;Trust Server Certificate=True";
+
+            try
+            {
+                // Ensure that the row clicked is valid
+                if (e.RowIndex >= 0 && e.RowIndex < CNSSDataGridView.Rows.Count)
+                {
+                    string cin = CNSSDataGridView.Rows[e.RowIndex].Cells[0].Value.ToString(); // CIN is in the first column
+
+                    // Retrieve employee details and CNSS data for the selected CIN
+                    string query = @"
+                SELECT E.Name, E.Salary, C.EmployerContribution, C.EmployeeContribution, C.TotalAmount, C.DeclarationDate 
+                FROM CNSS C 
+                JOIN Employees E ON C.CIN = E.CIN
+                WHERE C.CIN = E.CIN";
+
+                    using (SqlConnection connect = new SqlConnection(connectionString))
+                    {
+                        connect.Open();
+
+                        SqlCommand cmd = new SqlCommand(query, connect);
+                        cmd.Parameters.AddWithValue("@CIN", cin);
+
+                        SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        int rowsAffected = dataAdapter.Fill(dt);
+
+                        // Check if rows were returned
+                        if (rowsAffected > 0)
+                        {
+                            // Bind the DataTable to DataGridView
+                            CNSSDataGridView.DataSource = dt;
+                        }
+                        else
+                        {
+                            MessageBox.Show("No data found for this CIN.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+
+                        // Optionally, you can display the data in a message box
+                        if (dt.Rows.Count > 0)
+                        {
+                            DataRow row = dt.Rows[0];
+                            string employeeName = row["Name"].ToString();
+                            decimal employeeSalary = Convert.ToDecimal(row["Salary"]);
+                            decimal employerContribution = Convert.ToDecimal(row["EmployerContribution"]);
+                            decimal employeeContribution = Convert.ToDecimal(row["EmployeeContribution"]);
+                            decimal totalAmount = Convert.ToDecimal(row["TotalAmount"]);
+
+                            MessageBox.Show($"Employee: {employeeName}\nSalary: {employeeSalary}\nEmployer Contribution: {employerContribution}\nEmployee Contribution: {employeeContribution}\nTotal Amount: {totalAmount}", "Employee Details", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Invalid row clicked.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+        }
+
+        private void LoadCNSSData()
+        {
+            string connectionString = @"Data Source=ALOUAHAPC\SQLEXPRESS;Initial Catalog=GestionDesEmployee;Integrated Security=True;Pooling=False;Encrypt=True;Trust Server Certificate=True";
+            string query = "SELECT CIN, TotalAmount, EmployerContribution, EmployeeContribution, DeclarationDate FROM CNSS";
+
+            using (SqlConnection connect = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connect.Open();
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connect);
+                    DataTable dataTable = new DataTable();
+                    dataAdapter.Fill(dataTable);
+
+                    // Bind the DataTable to the DataGridView
+                    CNSSDataGridView.DataSource = dataTable;
+                    CNSSDataGridView.ColumnHeadersHeight = 40;
+
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"An error occurred while loading data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void adminDashboard_Click(object sender, EventArgs e)
+        {
+            adminDaashboard adminDaashboard = new adminDaashboard();
+            adminDaashboard.Show();
+            this.Hide();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Cnss_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

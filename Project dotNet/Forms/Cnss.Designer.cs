@@ -40,29 +40,34 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             label1 = new Label();
             panel1 = new Panel();
             pictureBox2 = new PictureBox();
             adminLogout = new Guna.UI2.WinForms.Guna2Button();
-            adminSales = new Guna.UI2.WinForms.Guna2Button();
             adminClients = new Guna.UI2.WinForms.Guna2Button();
             textBox2 = new TextBox();
             adminDashboard = new Guna.UI2.WinForms.Guna2Button();
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
+            pictureBox8 = new PictureBox();
+            pictureBox7 = new PictureBox();
+            pictureBox6 = new PictureBox();
+            pictureBox5 = new PictureBox();
+            pictureBox4 = new PictureBox();
             adminCnss = new Guna.UI2.WinForms.Guna2Button();
             adminEmployees = new Guna.UI2.WinForms.Guna2Button();
             sqlDataAdapter1 = new Microsoft.Data.SqlClient.SqlDataAdapter();
@@ -76,34 +81,26 @@
             textBox1 = new TextBox();
             BoxCinCNSS = new Guna.UI2.WinForms.Guna2TextBox();
             cnssEmployeeCin = new TextBox();
-            cnssBoxTotalamount = new TextBox();
-            cnssUpDown = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            cnssEmployerContribution = new TextBox();
             cnssimePicker = new Guna.UI2.WinForms.Guna2DateTimePicker();
             cnssBoxDate = new TextBox();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            dataGridView1 = new DataGridView();
-            dataGridTotalDeclaration = new DataGridView();
-            cnssSumarryTotalDEc = new TextBox();
-            cnssSumarryThisMonth = new TextBox();
-            dataGridThisMonth = new DataGridView();
-            cnssSumarryTotalAmount = new TextBox();
-            dataGridTotalAmount = new DataGridView();
-            cnssSumarryAverageAmount = new TextBox();
-            dataGridAverageAmount = new DataGridView();
             sqlCommand2 = new Microsoft.Data.SqlClient.SqlCommand();
+            textboxEmployerContribution = new Guna.UI2.WinForms.Guna2TextBox();
+            CNSSDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)cnssUpDown).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridTotalDeclaration).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridThisMonth).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridTotalAmount).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridAverageAmount).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)CNSSDataGridView).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -144,7 +141,6 @@
             // 
             adminLogout.BorderColor = Color.White;
             adminLogout.BorderRadius = 10;
-            adminLogout.BorderThickness = 1;
             adminLogout.CustomizableEdges = customizableEdges1;
             adminLogout.DisabledState.BorderColor = Color.DarkGray;
             adminLogout.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -159,34 +155,14 @@
             adminLogout.Size = new Size(205, 40);
             adminLogout.TabIndex = 8;
             adminLogout.Text = "Logout";
+            adminLogout.TextAlign = HorizontalAlignment.Left;
             adminLogout.Click += adminLogout_Click;
-            // 
-            // adminSales
-            // 
-            adminSales.BorderColor = Color.White;
-            adminSales.BorderRadius = 10;
-            adminSales.BorderThickness = 1;
-            adminSales.CustomizableEdges = customizableEdges3;
-            adminSales.DisabledState.BorderColor = Color.DarkGray;
-            adminSales.DisabledState.CustomBorderColor = Color.DarkGray;
-            adminSales.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            adminSales.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            adminSales.FillColor = Color.Transparent;
-            adminSales.Font = new Font("Segoe UI", 9F);
-            adminSales.ForeColor = Color.White;
-            adminSales.Location = new Point(71, 458);
-            adminSales.Name = "adminSales";
-            adminSales.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            adminSales.Size = new Size(205, 40);
-            adminSales.TabIndex = 7;
-            adminSales.Text = "Sales Management";
             // 
             // adminClients
             // 
             adminClients.BorderColor = Color.White;
             adminClients.BorderRadius = 10;
-            adminClients.BorderThickness = 1;
-            adminClients.CustomizableEdges = customizableEdges5;
+            adminClients.CustomizableEdges = customizableEdges3;
             adminClients.DisabledState.BorderColor = Color.DarkGray;
             adminClients.DisabledState.CustomBorderColor = Color.DarkGray;
             adminClients.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -196,10 +172,11 @@
             adminClients.ForeColor = Color.White;
             adminClients.Location = new Point(71, 397);
             adminClients.Name = "adminClients";
-            adminClients.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            adminClients.ShadowDecoration.CustomizableEdges = customizableEdges4;
             adminClients.Size = new Size(205, 40);
             adminClients.TabIndex = 5;
             adminClients.Text = " Vacation Management";
+            adminClients.TextAlign = HorizontalAlignment.Left;
             adminClients.Click += adminClients_Click;
             // 
             // textBox2
@@ -218,8 +195,7 @@
             // 
             adminDashboard.BorderColor = Color.White;
             adminDashboard.BorderRadius = 10;
-            adminDashboard.BorderThickness = 1;
-            adminDashboard.CustomizableEdges = customizableEdges7;
+            adminDashboard.CustomizableEdges = customizableEdges5;
             adminDashboard.DisabledState.BorderColor = Color.DarkGray;
             adminDashboard.DisabledState.CustomBorderColor = Color.DarkGray;
             adminDashboard.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -230,10 +206,12 @@
             adminDashboard.ForeColor = Color.White;
             adminDashboard.Location = new Point(71, 217);
             adminDashboard.Name = "adminDashboard";
-            adminDashboard.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            adminDashboard.ShadowDecoration.CustomizableEdges = customizableEdges6;
             adminDashboard.Size = new Size(205, 40);
             adminDashboard.TabIndex = 1;
             adminDashboard.Text = "Dashboard";
+            adminDashboard.TextAlign = HorizontalAlignment.Left;
+            adminDashboard.Click += adminDashboard_Click;
             // 
             // pictureBox1
             // 
@@ -248,9 +226,13 @@
             // panel2
             // 
             panel2.BackColor = Color.MidnightBlue;
+            panel2.Controls.Add(pictureBox8);
+            panel2.Controls.Add(pictureBox7);
+            panel2.Controls.Add(pictureBox6);
+            panel2.Controls.Add(pictureBox5);
+            panel2.Controls.Add(pictureBox4);
             panel2.Controls.Add(adminCnss);
             panel2.Controls.Add(adminLogout);
-            panel2.Controls.Add(adminSales);
             panel2.Controls.Add(adminClients);
             panel2.Controls.Add(adminEmployees);
             panel2.Controls.Add(textBox2);
@@ -262,33 +244,84 @@
             panel2.Size = new Size(350, 936);
             panel2.TabIndex = 3;
             // 
+            // pictureBox8
+            // 
+            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
+            pictureBox8.Location = new Point(16, 750);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(55, 25);
+            pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox8.TabIndex = 27;
+            pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
+            pictureBox7.Location = new Point(16, 405);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(55, 25);
+            pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox7.TabIndex = 13;
+            pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
+            pictureBox6.Location = new Point(16, 345);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(55, 25);
+            pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox6.TabIndex = 12;
+            pictureBox6.TabStop = false;
+            pictureBox6.Click += pictureBox6_Click;
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.Location = new Point(16, 288);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(55, 25);
+            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox5.TabIndex = 11;
+            pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(35, 226);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(41, 25);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabIndex = 10;
+            pictureBox4.TabStop = false;
+            pictureBox4.Click += pictureBox4_Click;
+            // 
             // adminCnss
             // 
             adminCnss.BackColor = Color.Transparent;
-            adminCnss.BorderColor = Color.Aquamarine;
+            adminCnss.BorderColor = Color.Azure;
             adminCnss.BorderRadius = 10;
-            adminCnss.BorderThickness = 3;
-            adminCnss.CustomizableEdges = customizableEdges9;
+            adminCnss.CustomizableEdges = customizableEdges7;
             adminCnss.DisabledState.BorderColor = Color.DarkGray;
             adminCnss.DisabledState.CustomBorderColor = Color.DarkGray;
             adminCnss.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             adminCnss.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             adminCnss.FillColor = Color.Transparent;
-            adminCnss.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            adminCnss.Font = new Font("Segoe UI", 9F);
             adminCnss.ForeColor = Color.White;
             adminCnss.Location = new Point(71, 336);
             adminCnss.Name = "adminCnss";
-            adminCnss.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            adminCnss.ShadowDecoration.CustomizableEdges = customizableEdges8;
             adminCnss.Size = new Size(205, 40);
             adminCnss.TabIndex = 9;
             adminCnss.Text = "Declaration CNSS";
+            adminCnss.TextAlign = HorizontalAlignment.Left;
             // 
             // adminEmployees
             // 
             adminEmployees.BorderColor = Color.White;
             adminEmployees.BorderRadius = 10;
-            adminEmployees.BorderThickness = 1;
-            adminEmployees.CustomizableEdges = customizableEdges11;
+            adminEmployees.CustomizableEdges = customizableEdges9;
             adminEmployees.DisabledState.BorderColor = Color.DarkGray;
             adminEmployees.DisabledState.CustomBorderColor = Color.DarkGray;
             adminEmployees.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -298,10 +331,11 @@
             adminEmployees.ForeColor = Color.White;
             adminEmployees.Location = new Point(71, 277);
             adminEmployees.Name = "adminEmployees";
-            adminEmployees.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            adminEmployees.ShadowDecoration.CustomizableEdges = customizableEdges10;
             adminEmployees.Size = new Size(205, 40);
             adminEmployees.TabIndex = 3;
             adminEmployees.Text = "Employee Management";
+            adminEmployees.TextAlign = HorizontalAlignment.Left;
             adminEmployees.Click += adminEmployees_Click;
             // 
             // sqlCommand1
@@ -428,7 +462,7 @@
             // 
             BoxCinCNSS.BorderColor = Color.DimGray;
             BoxCinCNSS.BorderRadius = 5;
-            BoxCinCNSS.CustomizableEdges = customizableEdges13;
+            BoxCinCNSS.CustomizableEdges = customizableEdges11;
             BoxCinCNSS.DefaultText = "";
             BoxCinCNSS.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             BoxCinCNSS.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -443,7 +477,7 @@
             BoxCinCNSS.PasswordChar = '\0';
             BoxCinCNSS.PlaceholderText = "";
             BoxCinCNSS.SelectedText = "";
-            BoxCinCNSS.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            BoxCinCNSS.ShadowDecoration.CustomizableEdges = customizableEdges12;
             BoxCinCNSS.Size = new Size(340, 45);
             BoxCinCNSS.TabIndex = 7;
             BoxCinCNSS.TextChanged += BoxCinCNSS_TextChanged;
@@ -459,31 +493,15 @@
             cnssEmployeeCin.Text = "Employee CIN";
             cnssEmployeeCin.TextChanged += textBox3_TextChanged;
             // 
-            // cnssBoxTotalamount
+            // cnssEmployerContribution
             // 
-            cnssBoxTotalamount.BorderStyle = BorderStyle.None;
-            cnssBoxTotalamount.Font = new Font("Microsoft Sans Serif", 10.8F);
-            cnssBoxTotalamount.Location = new Point(871, 135);
-            cnssBoxTotalamount.Name = "cnssBoxTotalamount";
-            cnssBoxTotalamount.Size = new Size(223, 21);
-            cnssBoxTotalamount.TabIndex = 10;
-            cnssBoxTotalamount.Text = "Total Amount";
-            // 
-            // cnssUpDown
-            // 
-            cnssUpDown.BackColor = Color.Transparent;
-            cnssUpDown.BorderColor = Color.DimGray;
-            cnssUpDown.BorderRadius = 5;
-            cnssUpDown.CustomizableEdges = customizableEdges15;
-            cnssUpDown.Font = new Font("Segoe UI", 9F);
-            cnssUpDown.Location = new Point(871, 163);
-            cnssUpDown.Margin = new Padding(3, 4, 3, 4);
-            cnssUpDown.Name = "cnssUpDown";
-            cnssUpDown.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            cnssUpDown.Size = new Size(340, 45);
-            cnssUpDown.TabIndex = 11;
-            cnssUpDown.UpDownButtonFillColor = Color.White;
-            cnssUpDown.ValueChanged += cnssUpDown_ValueChanged;
+            cnssEmployerContribution.BorderStyle = BorderStyle.None;
+            cnssEmployerContribution.Font = new Font("Microsoft Sans Serif", 10.8F);
+            cnssEmployerContribution.Location = new Point(871, 135);
+            cnssEmployerContribution.Name = "cnssEmployerContribution";
+            cnssEmployerContribution.Size = new Size(223, 21);
+            cnssEmployerContribution.TabIndex = 10;
+            cnssEmployerContribution.Text = "Employer Contribution";
             // 
             // cnssimePicker
             // 
@@ -492,7 +510,7 @@
             cnssimePicker.BorderRadius = 5;
             cnssimePicker.BorderThickness = 1;
             cnssimePicker.Checked = true;
-            cnssimePicker.CustomizableEdges = customizableEdges17;
+            cnssimePicker.CustomizableEdges = customizableEdges13;
             cnssimePicker.FillColor = Color.White;
             cnssimePicker.FocusedColor = Color.Black;
             cnssimePicker.Font = new Font("Segoe UI", 9F);
@@ -501,7 +519,7 @@
             cnssimePicker.MaxDate = new DateTime(2025, 10, 1, 0, 0, 0, 0);
             cnssimePicker.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             cnssimePicker.Name = "cnssimePicker";
-            cnssimePicker.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            cnssimePicker.ShadowDecoration.CustomizableEdges = customizableEdges14;
             cnssimePicker.Size = new Size(340, 45);
             cnssimePicker.TabIndex = 12;
             cnssimePicker.Value = new DateTime(2024, 12, 23, 0, 0, 0, 0);
@@ -521,7 +539,7 @@
             guna2Button1.BorderColor = Color.DodgerBlue;
             guna2Button1.BorderRadius = 5;
             guna2Button1.BorderThickness = 1;
-            guna2Button1.CustomizableEdges = customizableEdges19;
+            guna2Button1.CustomizableEdges = customizableEdges15;
             guna2Button1.DisabledState.BorderColor = Color.DarkGray;
             guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -531,143 +549,107 @@
             guna2Button1.ForeColor = Color.White;
             guna2Button1.Location = new Point(976, 299);
             guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges16;
             guna2Button1.Size = new Size(225, 56);
             guna2Button1.TabIndex = 14;
             guna2Button1.Text = "Submit Declaration";
             guna2Button1.Click += guna2Button1_Click;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridView1.BorderStyle = BorderStyle.None;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.GridColor = SystemColors.GradientActiveCaption;
-            dataGridView1.Location = new Point(512, 405);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(667, 393);
-            dataGridView1.TabIndex = 15;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // dataGridTotalDeclaration
-            // 
-            dataGridTotalDeclaration.BackgroundColor = Color.WhiteSmoke;
-            dataGridTotalDeclaration.BorderStyle = BorderStyle.None;
-            dataGridTotalDeclaration.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridTotalDeclaration.GridColor = Color.Black;
-            dataGridTotalDeclaration.Location = new Point(560, 497);
-            dataGridTotalDeclaration.Name = "dataGridTotalDeclaration";
-            dataGridTotalDeclaration.RowHeadersWidth = 51;
-            dataGridTotalDeclaration.Size = new Size(181, 92);
-            dataGridTotalDeclaration.TabIndex = 17;
-            dataGridTotalDeclaration.CellContentClick += dataGridTotalDeclaration_CellContentClick;
-            // 
-            // cnssSumarryTotalDEc
-            // 
-            cnssSumarryTotalDEc.BorderStyle = BorderStyle.None;
-            cnssSumarryTotalDEc.Font = new Font("Microsoft Sans Serif", 10.8F);
-            cnssSumarryTotalDEc.Location = new Point(577, 470);
-            cnssSumarryTotalDEc.Name = "cnssSumarryTotalDEc";
-            cnssSumarryTotalDEc.Size = new Size(147, 21);
-            cnssSumarryTotalDEc.TabIndex = 18;
-            cnssSumarryTotalDEc.Text = "Total Declarations";
-            cnssSumarryTotalDEc.TextChanged += textBox4_TextChanged;
-            // 
-            // cnssSumarryThisMonth
-            // 
-            cnssSumarryThisMonth.BorderStyle = BorderStyle.None;
-            cnssSumarryThisMonth.Font = new Font("Microsoft Sans Serif", 10.8F);
-            cnssSumarryThisMonth.Location = new Point(957, 458);
-            cnssSumarryThisMonth.Name = "cnssSumarryThisMonth";
-            cnssSumarryThisMonth.Size = new Size(100, 21);
-            cnssSumarryThisMonth.TabIndex = 20;
-            cnssSumarryThisMonth.Text = "This Month";
-            cnssSumarryThisMonth.TextChanged += cnssSumarryThisMonth_TextChanged;
-            // 
-            // dataGridThisMonth
-            // 
-            dataGridThisMonth.BackgroundColor = Color.WhiteSmoke;
-            dataGridThisMonth.BorderStyle = BorderStyle.None;
-            dataGridThisMonth.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridThisMonth.GridColor = Color.Gainsboro;
-            dataGridThisMonth.Location = new Point(914, 485);
-            dataGridThisMonth.Name = "dataGridThisMonth";
-            dataGridThisMonth.RowHeadersWidth = 51;
-            dataGridThisMonth.Size = new Size(181, 104);
-            dataGridThisMonth.TabIndex = 19;
-            dataGridThisMonth.CellContentClick += dataGridThisMonth_CellContentClick;
-            // 
-            // cnssSumarryTotalAmount
-            // 
-            cnssSumarryTotalAmount.BorderStyle = BorderStyle.None;
-            cnssSumarryTotalAmount.Font = new Font("Microsoft Sans Serif", 10.8F);
-            cnssSumarryTotalAmount.Location = new Point(586, 641);
-            cnssSumarryTotalAmount.Name = "cnssSumarryTotalAmount";
-            cnssSumarryTotalAmount.Size = new Size(116, 21);
-            cnssSumarryTotalAmount.TabIndex = 22;
-            cnssSumarryTotalAmount.Text = "Total Amount";
-            // 
-            // dataGridTotalAmount
-            // 
-            dataGridTotalAmount.BackgroundColor = Color.WhiteSmoke;
-            dataGridTotalAmount.BorderStyle = BorderStyle.None;
-            dataGridTotalAmount.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridTotalAmount.GridColor = Color.Gainsboro;
-            dataGridTotalAmount.Location = new Point(560, 668);
-            dataGridTotalAmount.Name = "dataGridTotalAmount";
-            dataGridTotalAmount.RowHeadersWidth = 51;
-            dataGridTotalAmount.Size = new Size(181, 92);
-            dataGridTotalAmount.TabIndex = 21;
-            dataGridTotalAmount.CellContentClick += dataGridTotalAmount_CellContentClick;
-            // 
-            // cnssSumarryAverageAmount
-            // 
-            cnssSumarryAverageAmount.BorderStyle = BorderStyle.None;
-            cnssSumarryAverageAmount.Font = new Font("Microsoft Sans Serif", 10.8F);
-            cnssSumarryAverageAmount.Location = new Point(937, 641);
-            cnssSumarryAverageAmount.Name = "cnssSumarryAverageAmount";
-            cnssSumarryAverageAmount.Size = new Size(134, 21);
-            cnssSumarryAverageAmount.TabIndex = 24;
-            cnssSumarryAverageAmount.Text = "Average Amount";
-            // 
-            // dataGridAverageAmount
-            // 
-            dataGridAverageAmount.BackgroundColor = Color.WhiteSmoke;
-            dataGridAverageAmount.BorderStyle = BorderStyle.None;
-            dataGridAverageAmount.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridAverageAmount.GridColor = Color.Gainsboro;
-            dataGridAverageAmount.Location = new Point(914, 668);
-            dataGridAverageAmount.Name = "dataGridAverageAmount";
-            dataGridAverageAmount.RowHeadersWidth = 51;
-            dataGridAverageAmount.Size = new Size(181, 92);
-            dataGridAverageAmount.TabIndex = 23;
-            dataGridAverageAmount.CellContentClick += dataGridAverageAmount_CellContentClick;
             // 
             // sqlCommand2
             // 
             sqlCommand2.CommandTimeout = 30;
             sqlCommand2.EnableOptimizedParameterBinding = false;
             // 
+            // textboxEmployerContribution
+            // 
+            textboxEmployerContribution.BorderColor = Color.DimGray;
+            textboxEmployerContribution.BorderRadius = 5;
+            textboxEmployerContribution.CustomizableEdges = customizableEdges17;
+            textboxEmployerContribution.DefaultText = "";
+            textboxEmployerContribution.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            textboxEmployerContribution.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            textboxEmployerContribution.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            textboxEmployerContribution.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            textboxEmployerContribution.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            textboxEmployerContribution.Font = new Font("Segoe UI", 9F);
+            textboxEmployerContribution.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            textboxEmployerContribution.Location = new Point(871, 161);
+            textboxEmployerContribution.Margin = new Padding(3, 4, 3, 4);
+            textboxEmployerContribution.Name = "textboxEmployerContribution";
+            textboxEmployerContribution.PasswordChar = '\0';
+            textboxEmployerContribution.PlaceholderText = "";
+            textboxEmployerContribution.SelectedText = "";
+            textboxEmployerContribution.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            textboxEmployerContribution.Size = new Size(340, 45);
+            textboxEmployerContribution.TabIndex = 17;
+            textboxEmployerContribution.TextChanged += guna2TextBox1_TextChanged;
+            // 
+            // CNSSDataGridView
+            // 
+            CNSSDataGridView.AllowUserToAddRows = false;
+            CNSSDataGridView.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle4.BackColor = Color.White;
+            CNSSDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(100, 88, 255);
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle5.ForeColor = Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            CNSSDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            CNSSDataGridView.ColumnHeadersHeight = 4;
+            CNSSDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.White;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle6.ForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            CNSSDataGridView.DefaultCellStyle = dataGridViewCellStyle6;
+            CNSSDataGridView.GridColor = Color.FromArgb(231, 229, 255);
+            CNSSDataGridView.Location = new Point(402, 422);
+            CNSSDataGridView.Name = "CNSSDataGridView";
+            CNSSDataGridView.ReadOnly = true;
+            CNSSDataGridView.RowHeadersVisible = false;
+            CNSSDataGridView.RowHeadersWidth = 51;
+            CNSSDataGridView.Size = new Size(824, 316);
+            CNSSDataGridView.TabIndex = 18;
+            CNSSDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            CNSSDataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
+            CNSSDataGridView.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            CNSSDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            CNSSDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            CNSSDataGridView.ThemeStyle.BackColor = Color.White;
+            CNSSDataGridView.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            CNSSDataGridView.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            CNSSDataGridView.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            CNSSDataGridView.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
+            CNSSDataGridView.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            CNSSDataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            CNSSDataGridView.ThemeStyle.HeaderStyle.Height = 4;
+            CNSSDataGridView.ThemeStyle.ReadOnly = true;
+            CNSSDataGridView.ThemeStyle.RowsStyle.BackColor = Color.White;
+            CNSSDataGridView.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            CNSSDataGridView.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
+            CNSSDataGridView.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            CNSSDataGridView.ThemeStyle.RowsStyle.Height = 29;
+            CNSSDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            CNSSDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            CNSSDataGridView.CellContentClick += CNSSDataGridView_CellContentClick;
+            // 
             // Cnss
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1284, 848);
-            Controls.Add(cnssSumarryAverageAmount);
-            Controls.Add(dataGridAverageAmount);
-            Controls.Add(cnssSumarryTotalAmount);
-            Controls.Add(dataGridTotalAmount);
-            Controls.Add(cnssSumarryThisMonth);
-            Controls.Add(dataGridThisMonth);
-            Controls.Add(cnssSumarryTotalDEc);
-            Controls.Add(dataGridTotalDeclaration);
-            Controls.Add(dataGridView1);
+            Controls.Add(CNSSDataGridView);
+            Controls.Add(textboxEmployerContribution);
             Controls.Add(guna2Button1);
             Controls.Add(cnssBoxDate);
             Controls.Add(cnssimePicker);
-            Controls.Add(cnssUpDown);
-            Controls.Add(cnssBoxTotalamount);
+            Controls.Add(cnssEmployerContribution);
             Controls.Add(cnssEmployeeCin);
             Controls.Add(BoxCinCNSS);
             Controls.Add(textBox1);
@@ -678,22 +660,23 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "Cnss";
             Text = "Cnss";
+            Load += Cnss_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)cnssUpDown).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridTotalDeclaration).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridThisMonth).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridTotalAmount).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridAverageAmount).EndInit();
+            ((System.ComponentModel.ISupportInitialize)CNSSDataGridView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -704,7 +687,6 @@
         private Panel panel1;
         private PictureBox pictureBox2;
         private Guna.UI2.WinForms.Guna2Button adminLogout;
-        private Guna.UI2.WinForms.Guna2Button adminSales;
         private Guna.UI2.WinForms.Guna2Button adminClients;
         private TextBox textBox2;
         private Guna.UI2.WinForms.Guna2Button adminDashboard;
@@ -722,21 +704,18 @@
         private TextBox textBox1;
         private Guna.UI2.WinForms.Guna2TextBox BoxCinCNSS;
         private TextBox cnssEmployeeCin;
-        private TextBox cnssBoxTotalamount;
-        private Guna.UI2.WinForms.Guna2NumericUpDown cnssUpDown;
+        private TextBox cnssEmployerContribution;
         private Guna.UI2.WinForms.Guna2DateTimePicker cnssimePicker;
         private TextBox cnssBoxDate;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private DataGridView dataGridView1;
-        private DataGridView dataGridTotalDeclaration;
-        private TextBox cnssSumarryTotalDEc;
-        private TextBox cnssSumarryThisMonth;
-        private DataGridView dataGridThisMonth;
-        private TextBox cnssSumarryTotalAmount;
-        private DataGridView dataGridTotalAmount;
-        private TextBox cnssSumarryAverageAmount;
-        private DataGridView dataGridAverageAmount;
         private Microsoft.Data.SqlClient.SqlCommand sqlCommand2;
         private Guna.UI2.WinForms.Guna2Button adminCnss;
+        private Guna.UI2.WinForms.Guna2TextBox textboxEmployerContribution;
+        private Guna.UI2.WinForms.Guna2DataGridView CNSSDataGridView;
+        private PictureBox pictureBox4;
+        private PictureBox pictureBox6;
+        private PictureBox pictureBox5;
+        private PictureBox pictureBox7;
+        private PictureBox pictureBox8;
     }
 }
