@@ -252,7 +252,7 @@
             adminClients.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             adminClients.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             adminClients.FillColor = Color.Transparent;
-            adminClients.Font = new Font("Segoe UI", 9F);
+            adminClients.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             adminClients.ForeColor = Color.White;
             adminClients.Location = new Point(71, 397);
             adminClients.Name = "adminClients";

@@ -307,7 +307,7 @@
             adminCnss.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             adminCnss.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             adminCnss.FillColor = Color.Transparent;
-            adminCnss.Font = new Font("Segoe UI", 9F);
+            adminCnss.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             adminCnss.ForeColor = Color.White;
             adminCnss.Location = new Point(71, 336);
             adminCnss.Name = "adminCnss";

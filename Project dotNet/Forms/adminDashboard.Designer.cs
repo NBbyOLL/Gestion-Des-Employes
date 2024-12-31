@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminDaashboard));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label1 = new Label();
             panel1 = new Panel();
             pictureBox2 = new PictureBox();
@@ -130,18 +130,18 @@
             adminOverview.AccessibleRole = AccessibleRole.Cursor;
             adminOverview.BorderColor = Color.Aquamarine;
             adminOverview.BorderRadius = 10;
-            adminOverview.CustomizableEdges = customizableEdges11;
+            adminOverview.CustomizableEdges = customizableEdges21;
             adminOverview.DisabledState.BorderColor = Color.DarkGray;
             adminOverview.DisabledState.CustomBorderColor = Color.DarkGray;
             adminOverview.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             adminOverview.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             adminOverview.FillColor = Color.Transparent;
-            adminOverview.FocusedColor = Color.FromArgb(64, 64, 64);
-            adminOverview.Font = new Font("Segoe UI", 9F);
+            adminOverview.FocusedColor = Color.Navy;
+            adminOverview.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             adminOverview.ForeColor = Color.White;
             adminOverview.Location = new Point(71, 217);
             adminOverview.Name = "adminOverview";
-            adminOverview.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            adminOverview.ShadowDecoration.CustomizableEdges = customizableEdges22;
             adminOverview.Size = new Size(205, 40);
             adminOverview.TabIndex = 1;
             adminOverview.Text = "Dashboard";
@@ -165,7 +165,7 @@
             // 
             adminEmployees.BorderColor = Color.White;
             adminEmployees.BorderRadius = 10;
-            adminEmployees.CustomizableEdges = customizableEdges13;
+            adminEmployees.CustomizableEdges = customizableEdges23;
             adminEmployees.DisabledState.BorderColor = Color.DarkGray;
             adminEmployees.DisabledState.CustomBorderColor = Color.DarkGray;
             adminEmployees.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -175,7 +175,7 @@
             adminEmployees.ForeColor = Color.White;
             adminEmployees.Location = new Point(71, 277);
             adminEmployees.Name = "adminEmployees";
-            adminEmployees.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            adminEmployees.ShadowDecoration.CustomizableEdges = customizableEdges24;
             adminEmployees.Size = new Size(205, 40);
             adminEmployees.TabIndex = 3;
             adminEmployees.Text = "Employee Management";
@@ -186,7 +186,7 @@
             // 
             adminCnss.BorderColor = Color.White;
             adminCnss.BorderRadius = 10;
-            adminCnss.CustomizableEdges = customizableEdges15;
+            adminCnss.CustomizableEdges = customizableEdges25;
             adminCnss.DisabledState.BorderColor = Color.DarkGray;
             adminCnss.DisabledState.CustomBorderColor = Color.DarkGray;
             adminCnss.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -196,7 +196,7 @@
             adminCnss.ForeColor = Color.White;
             adminCnss.Location = new Point(71, 338);
             adminCnss.Name = "adminCnss";
-            adminCnss.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            adminCnss.ShadowDecoration.CustomizableEdges = customizableEdges26;
             adminCnss.Size = new Size(205, 40);
             adminCnss.TabIndex = 4;
             adminCnss.Text = "Declaration CNSS";
@@ -207,7 +207,7 @@
             // 
             adminClients.BorderColor = Color.White;
             adminClients.BorderRadius = 10;
-            adminClients.CustomizableEdges = customizableEdges17;
+            adminClients.CustomizableEdges = customizableEdges27;
             adminClients.DisabledState.BorderColor = Color.DarkGray;
             adminClients.DisabledState.CustomBorderColor = Color.DarkGray;
             adminClients.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -217,7 +217,7 @@
             adminClients.ForeColor = Color.White;
             adminClients.Location = new Point(71, 397);
             adminClients.Name = "adminClients";
-            adminClients.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            adminClients.ShadowDecoration.CustomizableEdges = customizableEdges28;
             adminClients.Size = new Size(205, 40);
             adminClients.TabIndex = 5;
             adminClients.Text = " Vacation Management";
@@ -228,7 +228,7 @@
             // 
             adminLogout.BorderColor = Color.White;
             adminLogout.BorderRadius = 10;
-            adminLogout.CustomizableEdges = customizableEdges19;
+            adminLogout.CustomizableEdges = customizableEdges29;
             adminLogout.DisabledState.BorderColor = Color.DarkGray;
             adminLogout.DisabledState.CustomBorderColor = Color.DarkGray;
             adminLogout.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -238,7 +238,7 @@
             adminLogout.ForeColor = Color.White;
             adminLogout.Location = new Point(71, 741);
             adminLogout.Name = "adminLogout";
-            adminLogout.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            adminLogout.ShadowDecoration.CustomizableEdges = customizableEdges30;
             adminLogout.Size = new Size(205, 40);
             adminLogout.TabIndex = 8;
             adminLogout.Text = "Logout";
@@ -412,7 +412,7 @@
             // 
             AutoScaleDimensions = new SizeF(13F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
+            BackColor = SystemColors.Control;
             ClientSize = new Size(1284, 848);
             Controls.Add(pictureBox10);
             Controls.Add(labelsalaries);

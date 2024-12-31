@@ -611,7 +611,7 @@
             adminEmployees.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             adminEmployees.FillColor = Color.Transparent;
             adminEmployees.FocusedColor = Color.Silver;
-            adminEmployees.Font = new Font("Segoe UI", 9F);
+            adminEmployees.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             adminEmployees.ForeColor = Color.White;
             adminEmployees.Location = new Point(71, 277);
             adminEmployees.Name = "adminEmployees";
