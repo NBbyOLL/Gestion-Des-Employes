@@ -99,7 +99,7 @@ namespace Project_dotNet.Forms
                         object result = command.ExecuteScalar(); // Get the result of the query
 
                         decimal totalSalaries = (result != DBNull.Value) ? Convert.ToDecimal(result) : 0;
-                        labelsalaries.Text = "{totalSalaries:C}"; // Format as currency
+                        labelsalaries.Text = $"{totalSalaries}"; // Format as currency
                         labelsalaries.TextAlign = ContentAlignment.MiddleCenter;
                         labelsalaries.Font = new Font("Times New Roman", 20F, FontStyle.Bold, GraphicsUnit.Point);
                     }
