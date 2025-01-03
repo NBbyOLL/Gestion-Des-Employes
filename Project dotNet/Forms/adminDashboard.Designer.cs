@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminDaashboard));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label1 = new Label();
             panel1 = new Panel();
             pictureBox2 = new PictureBox();
@@ -65,6 +65,9 @@
             pictureBox10 = new PictureBox();
             labelsalaries = new Label();
             sqlCommand2 = new Microsoft.Data.SqlClient.SqlCommand();
+            pictureBox11 = new PictureBox();
+            pictureBox12 = new PictureBox();
+            pictureBox13 = new PictureBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -77,6 +80,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -130,7 +136,7 @@
             adminOverview.AccessibleRole = AccessibleRole.Cursor;
             adminOverview.BorderColor = Color.Aquamarine;
             adminOverview.BorderRadius = 10;
-            adminOverview.CustomizableEdges = customizableEdges21;
+            adminOverview.CustomizableEdges = customizableEdges1;
             adminOverview.DisabledState.BorderColor = Color.DarkGray;
             adminOverview.DisabledState.CustomBorderColor = Color.DarkGray;
             adminOverview.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -141,7 +147,7 @@
             adminOverview.ForeColor = Color.White;
             adminOverview.Location = new Point(71, 217);
             adminOverview.Name = "adminOverview";
-            adminOverview.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            adminOverview.ShadowDecoration.CustomizableEdges = customizableEdges2;
             adminOverview.Size = new Size(205, 40);
             adminOverview.TabIndex = 1;
             adminOverview.Text = "Dashboard";
@@ -165,7 +171,7 @@
             // 
             adminEmployees.BorderColor = Color.White;
             adminEmployees.BorderRadius = 10;
-            adminEmployees.CustomizableEdges = customizableEdges23;
+            adminEmployees.CustomizableEdges = customizableEdges3;
             adminEmployees.DisabledState.BorderColor = Color.DarkGray;
             adminEmployees.DisabledState.CustomBorderColor = Color.DarkGray;
             adminEmployees.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -175,7 +181,7 @@
             adminEmployees.ForeColor = Color.White;
             adminEmployees.Location = new Point(71, 277);
             adminEmployees.Name = "adminEmployees";
-            adminEmployees.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            adminEmployees.ShadowDecoration.CustomizableEdges = customizableEdges4;
             adminEmployees.Size = new Size(205, 40);
             adminEmployees.TabIndex = 3;
             adminEmployees.Text = "Employee Management";
@@ -186,7 +192,7 @@
             // 
             adminCnss.BorderColor = Color.White;
             adminCnss.BorderRadius = 10;
-            adminCnss.CustomizableEdges = customizableEdges25;
+            adminCnss.CustomizableEdges = customizableEdges5;
             adminCnss.DisabledState.BorderColor = Color.DarkGray;
             adminCnss.DisabledState.CustomBorderColor = Color.DarkGray;
             adminCnss.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -196,7 +202,7 @@
             adminCnss.ForeColor = Color.White;
             adminCnss.Location = new Point(71, 338);
             adminCnss.Name = "adminCnss";
-            adminCnss.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            adminCnss.ShadowDecoration.CustomizableEdges = customizableEdges6;
             adminCnss.Size = new Size(205, 40);
             adminCnss.TabIndex = 4;
             adminCnss.Text = "Declaration CNSS";
@@ -207,7 +213,7 @@
             // 
             adminClients.BorderColor = Color.White;
             adminClients.BorderRadius = 10;
-            adminClients.CustomizableEdges = customizableEdges27;
+            adminClients.CustomizableEdges = customizableEdges7;
             adminClients.DisabledState.BorderColor = Color.DarkGray;
             adminClients.DisabledState.CustomBorderColor = Color.DarkGray;
             adminClients.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -217,7 +223,7 @@
             adminClients.ForeColor = Color.White;
             adminClients.Location = new Point(71, 397);
             adminClients.Name = "adminClients";
-            adminClients.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            adminClients.ShadowDecoration.CustomizableEdges = customizableEdges8;
             adminClients.Size = new Size(205, 40);
             adminClients.TabIndex = 5;
             adminClients.Text = " Vacation Management";
@@ -228,7 +234,7 @@
             // 
             adminLogout.BorderColor = Color.White;
             adminLogout.BorderRadius = 10;
-            adminLogout.CustomizableEdges = customizableEdges29;
+            adminLogout.CustomizableEdges = customizableEdges9;
             adminLogout.DisabledState.BorderColor = Color.DarkGray;
             adminLogout.DisabledState.CustomBorderColor = Color.DarkGray;
             adminLogout.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -238,7 +244,7 @@
             adminLogout.ForeColor = Color.White;
             adminLogout.Location = new Point(71, 741);
             adminLogout.Name = "adminLogout";
-            adminLogout.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            adminLogout.ShadowDecoration.CustomizableEdges = customizableEdges10;
             adminLogout.Size = new Size(205, 40);
             adminLogout.TabIndex = 8;
             adminLogout.Text = "Logout";
@@ -341,9 +347,9 @@
             // 
             labelEmployeeCount.BackColor = Color.FromArgb(255, 102, 196);
             labelEmployeeCount.ForeColor = Color.White;
-            labelEmployeeCount.Location = new Point(425, 123);
+            labelEmployeeCount.Location = new Point(407, 332);
             labelEmployeeCount.Name = "labelEmployeeCount";
-            labelEmployeeCount.Size = new Size(190, 100);
+            labelEmployeeCount.Size = new Size(230, 101);
             labelEmployeeCount.TabIndex = 16;
             labelEmployeeCount.Text = "                          \r\n\r\n\r\n\r\n";
             labelEmployeeCount.TextAlign = ContentAlignment.MiddleCenter;
@@ -353,9 +359,9 @@
             // 
             vacationlabel.BackColor = Color.FromArgb(170, 216, 134);
             vacationlabel.ForeColor = Color.White;
-            vacationlabel.Location = new Point(712, 123);
+            vacationlabel.Location = new Point(694, 332);
             vacationlabel.Name = "vacationlabel";
-            vacationlabel.Size = new Size(190, 100);
+            vacationlabel.Size = new Size(230, 101);
             vacationlabel.TabIndex = 16;
             vacationlabel.Text = "                          \r\n \r\n\r\n\r\n";
             vacationlabel.TextAlign = ContentAlignment.MiddleCenter;
@@ -364,9 +370,9 @@
             // pictureBox8
             // 
             pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new Point(425, 46);
+            pictureBox8.Location = new Point(407, 255);
             pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(190, 74);
+            pictureBox8.Size = new Size(230, 74);
             pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox8.TabIndex = 17;
             pictureBox8.TabStop = false;
@@ -374,9 +380,9 @@
             // pictureBox9
             // 
             pictureBox9.Image = (Image)resources.GetObject("pictureBox9.Image");
-            pictureBox9.Location = new Point(712, 46);
+            pictureBox9.Location = new Point(694, 255);
             pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(190, 74);
+            pictureBox9.Size = new Size(230, 74);
             pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox9.TabIndex = 18;
             pictureBox9.TabStop = false;
@@ -384,9 +390,9 @@
             // pictureBox10
             // 
             pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
-            pictureBox10.Location = new Point(1006, 46);
+            pictureBox10.Location = new Point(988, 255);
             pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(190, 74);
+            pictureBox10.Size = new Size(230, 74);
             pictureBox10.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox10.TabIndex = 20;
             pictureBox10.TabStop = false;
@@ -395,9 +401,9 @@
             // 
             labelsalaries.BackColor = Color.FromArgb(154, 173, 255);
             labelsalaries.ForeColor = Color.White;
-            labelsalaries.Location = new Point(1006, 123);
+            labelsalaries.Location = new Point(988, 332);
             labelsalaries.Name = "labelsalaries";
-            labelsalaries.Size = new Size(190, 100);
+            labelsalaries.Size = new Size(230, 101);
             labelsalaries.TabIndex = 19;
             labelsalaries.Text = "                          \r\n \r\n\r\n\r\n";
             labelsalaries.TextAlign = ContentAlignment.MiddleCenter;
@@ -408,12 +414,45 @@
             sqlCommand2.CommandTimeout = 30;
             sqlCommand2.EnableOptimizedParameterBinding = false;
             // 
+            // pictureBox11
+            // 
+            pictureBox11.Image = (Image)resources.GetObject("pictureBox11.Image");
+            pictureBox11.Location = new Point(501, 353);
+            pictureBox11.Name = "pictureBox11";
+            pictureBox11.Size = new Size(125, 62);
+            pictureBox11.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox11.TabIndex = 21;
+            pictureBox11.TabStop = false;
+            // 
+            // pictureBox12
+            // 
+            pictureBox12.Image = (Image)resources.GetObject("pictureBox12.Image");
+            pictureBox12.Location = new Point(789, 353);
+            pictureBox12.Name = "pictureBox12";
+            pictureBox12.Size = new Size(125, 62);
+            pictureBox12.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox12.TabIndex = 22;
+            pictureBox12.TabStop = false;
+            // 
+            // pictureBox13
+            // 
+            pictureBox13.Image = (Image)resources.GetObject("pictureBox13.Image");
+            pictureBox13.Location = new Point(1159, 353);
+            pictureBox13.Name = "pictureBox13";
+            pictureBox13.Size = new Size(59, 62);
+            pictureBox13.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox13.TabIndex = 23;
+            pictureBox13.TabStop = false;
+            // 
             // adminDaashboard
             // 
             AutoScaleDimensions = new SizeF(13F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(1284, 848);
+            Controls.Add(pictureBox13);
+            Controls.Add(pictureBox12);
+            Controls.Add(pictureBox11);
             Controls.Add(pictureBox10);
             Controls.Add(labelsalaries);
             Controls.Add(pictureBox9);
@@ -426,6 +465,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(5, 3, 5, 3);
             Name = "adminDaashboard";
+            StartPosition = FormStartPosition.CenterScreen;
             Load += adminDaashboard_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -441,6 +481,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
             ResumeLayout(false);
         }
 
@@ -490,5 +533,8 @@
         private PictureBox pictureBox10;
         private Label labelsalaries;
         private Microsoft.Data.SqlClient.SqlCommand sqlCommand2;
+        private PictureBox pictureBox11;
+        private PictureBox pictureBox12;
+        private PictureBox pictureBox13;
     }
 }

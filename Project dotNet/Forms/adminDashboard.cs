@@ -42,10 +42,10 @@ namespace Project_dotNet.Forms
                     {
                         int employeeCount = (int)command.ExecuteScalar();
                         labelEmployeeCount.Text = employeeCount.ToString();
-                        labelEmployeeCount.TextAlign = ContentAlignment.MiddleCenter;
-                        labelEmployeeCount.Font = new Font("Times new roman", 30F, FontStyle.Bold, GraphicsUnit.Point);
+                        labelEmployeeCount.TextAlign = ContentAlignment.MiddleLeft;
+                        labelEmployeeCount.Font = new Font("Times new roman", 25F, FontStyle.Bold, GraphicsUnit.Point);
 
-
+ 
 
                     }
                 }
@@ -70,8 +70,8 @@ namespace Project_dotNet.Forms
                     {
                         int employeeCount = (int)command.ExecuteScalar();
                         vacationlabel.Text = employeeCount.ToString();
-                        vacationlabel.TextAlign = ContentAlignment.MiddleCenter;
-                        vacationlabel.Font = new Font("Times new roman", 30F, FontStyle.Bold, GraphicsUnit.Point);
+                        vacationlabel.TextAlign = ContentAlignment.MiddleLeft;
+                        vacationlabel.Font = new Font("Times new roman", 25F, FontStyle.Bold, GraphicsUnit.Point);
 
 
 
@@ -100,7 +100,7 @@ namespace Project_dotNet.Forms
 
                         decimal totalSalaries = (result != DBNull.Value) ? Convert.ToDecimal(result) : 0;
                         labelsalaries.Text = $"{totalSalaries}"; // Format as currency
-                        labelsalaries.TextAlign = ContentAlignment.MiddleCenter;
+                        labelsalaries.TextAlign = ContentAlignment.MiddleLeft;
                         labelsalaries.Font = new Font("Times New Roman", 20F, FontStyle.Bold, GraphicsUnit.Point);
                     }
                 }

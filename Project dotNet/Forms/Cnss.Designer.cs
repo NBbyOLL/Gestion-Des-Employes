@@ -590,6 +590,7 @@
             CNSSDataGridView.AllowUserToDeleteRows = false;
             dataGridViewCellStyle4.BackColor = Color.White;
             CNSSDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            CNSSDataGridView.BackgroundColor = SystemColors.Control;
             dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = Color.FromArgb(100, 88, 255);
             dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
@@ -621,7 +622,7 @@
             CNSSDataGridView.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
             CNSSDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
             CNSSDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            CNSSDataGridView.ThemeStyle.BackColor = Color.White;
+            CNSSDataGridView.ThemeStyle.BackColor = SystemColors.Control;
             CNSSDataGridView.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
             CNSSDataGridView.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
             CNSSDataGridView.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
@@ -659,6 +660,7 @@
             Controls.Add(panel2);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Cnss";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Cnss";
             Load += Cnss_Load;
             panel1.ResumeLayout(false);

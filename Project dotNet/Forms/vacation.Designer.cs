@@ -82,6 +82,7 @@
             vocationbuttonSave = new Guna.UI2.WinForms.Guna2Button();
             boxUpdate = new Guna.UI2.WinForms.Guna2Button();
             sqlCommandBuilder1 = new Microsoft.Data.SqlClient.SqlCommandBuilder();
+            vacationDataGridView = new DataGridView();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panel2.SuspendLayout();
@@ -91,6 +92,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)vacationDataGridView).BeginInit();
             SuspendLayout();
             // 
             // panel3
@@ -536,11 +538,24 @@
             boxUpdate.Text = "Update";
             boxUpdate.Click += boxUpdate_Click;
             // 
+            // vacationDataGridView
+            // 
+            vacationDataGridView.BackgroundColor = SystemColors.Control;
+            vacationDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            vacationDataGridView.Location = new Point(402, 383);
+            vacationDataGridView.Name = "vacationDataGridView";
+            vacationDataGridView.ReadOnly = true;
+            vacationDataGridView.RowHeadersWidth = 51;
+            vacationDataGridView.Size = new Size(798, 288);
+            vacationDataGridView.TabIndex = 27;
+            vacationDataGridView.CellContentClick += vacationDataGridView_CellContentClick;
+            // 
             // vacation
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1284, 848);
+            Controls.Add(vacationDataGridView);
             Controls.Add(boxUpdate);
             Controls.Add(boxDelete);
             Controls.Add(vocationbuttonSave);
@@ -556,7 +571,9 @@
             Controls.Add(panel3);
             FormBorderStyle = FormBorderStyle.None;
             Name = "vacation";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "vacation";
+            Load += vacation_Load;
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
@@ -568,6 +585,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)vacationDataGridView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -603,5 +621,6 @@
         private PictureBox pictureBox5;
         private PictureBox pictureBox4;
         private PictureBox pictureBox2;
+        private DataGridView vacationDataGridView;
     }
 }

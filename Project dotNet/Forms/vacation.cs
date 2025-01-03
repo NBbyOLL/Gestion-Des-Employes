@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using Guna.UI2.WinForms;
 using Microsoft.Data.SqlClient;
 using static Guna.UI2.Native.WinApi;
 
@@ -15,9 +16,14 @@ namespace Project_dotNet.Forms
 {
     public partial class vacation : Form
     {
+        private object gunaDataGridView;
+
         public vacation()
         {
             InitializeComponent();
+
+
+
         }
 
         private void adminClients_Click(object sender, EventArgs e)
@@ -60,7 +66,7 @@ namespace Project_dotNet.Forms
         {
             string connectionString = @"Data Source=ALOUAHAPC\SQLEXPRESS;Initial Catalog=GestionDesEmployee;Integrated Security=True;Pooling=False;Encrypt=True;Trust Server Certificate=True";
             string cin = Boxvacationcin.Text.Trim();
-            string isPaidString = ComboBoxisPaid.SelectedItem.ToString();
+            string isPaidString = ComboBoxisPaid.SelectedItem?.ToString() ?? string.Empty; 
             DateTime Datestart = vacationtimePickerStartDate.Value;
             DateTime DateEnd = vacationtimePickerEndDate.Value;
 
@@ -97,6 +103,8 @@ namespace Project_dotNet.Forms
                         cmd.ExecuteNonQuery();
 
                         MessageBox.Show("Record inserted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        // Refresh DataGridView (simple way)
+                        LoadVacationData();
                     }
                     else
                     {
@@ -158,6 +166,8 @@ namespace Project_dotNet.Forms
                     if (rowsAffected > 0)
                     {
                         MessageBox.Show("Vacation updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Rebind the data to the DataGridView
+                        LoadVacationData();
                     }
                     else
                     {
@@ -174,15 +184,23 @@ namespace Project_dotNet.Forms
         private void boxDelete_Click(object sender, EventArgs e)
 
         {
+            try
+            {
 
-            SqlConnection connect = new SqlConnection(@"Data Source=ALOUAHAPC\SQLEXPRESS;Initial Catalog=GestionDesEmployee;Integrated Security=True;Pooling=False;Encrypt=True;Trust Server Certificate=True");
+                SqlConnection connect = new SqlConnection(@"Data Source=ALOUAHAPC\SQLEXPRESS;Initial Catalog=GestionDesEmployee;Integrated Security=True;Pooling=False;Encrypt=True;Trust Server Certificate=True");
             connect.Open();
             SqlCommand cmd = new SqlCommand("delete Vacation where CIN=@CIN ", connect);
             cmd.Parameters.AddWithValue("@CIN", Boxvacationcin.Text);
             cmd.ExecuteNonQuery();
             connect.Close();
             MessageBox.Show("Employee deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            LoadVacationData();
 
+        }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error deleting vacation: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void Boxvacationcin_TextChanged(object sender, EventArgs e)
@@ -196,5 +214,58 @@ namespace Project_dotNet.Forms
             adminDaashboard.Show();
             this.Hide();
         }
+
+        // Fetch and display the data in DataGridView
+        private void LoadVacationData()
+        {
+            string connectionString = @"Data Source=ALOUAHAPC\SQLEXPRESS;Initial Catalog=GestionDesEmployee;Integrated Security=True;Pooling=False;Encrypt=True;Trust Server Certificate=True";
+
+            string query = @"
+                SELECT 
+                    V.CIN, 
+                    E.Name, 
+                    E.Salary, 
+                    V.StartDate, 
+                    V.EndDate, 
+                    V.IsPaid, 
+                    DATEDIFF(DAY, V.StartDate, V.EndDate) AS VacationDays, 
+                    CASE 
+                        WHEN V.IsPaid = 0 THEN E.Salary - (DATEDIFF(DAY, V.StartDate, V.EndDate) * 100) 
+                        ELSE E.Salary 
+                    END AS UpdatedSalary 
+                FROM vacation V 
+                JOIN Employees E ON V.CIN = E.CIN";
+
+            try
+            {
+                using (SqlConnection connect = new SqlConnection(connectionString))
+                {
+                    connect.Open();
+
+                    // Create a DataAdapter to execute the query and fill the DataTable
+                    SqlDataAdapter adapter = new SqlDataAdapter(query, connect);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    // Bind the DataTable to the DataGridView
+                    vacationDataGridView.DataSource = dataTable;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void vacation_Load(object sender, EventArgs e)
+        {
+            LoadVacationData();
+        }
+
+        private void vacationDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
+

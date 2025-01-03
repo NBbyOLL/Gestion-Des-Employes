@@ -22,6 +22,8 @@ namespace Project_dotNet.Forms
         public Cnss()
         {
             InitializeComponent();
+            DisplayEmployerContribution(); // Display employer contribution on form initialization
+
 
         }
 
@@ -345,6 +347,7 @@ namespace Project_dotNet.Forms
 
         private void Cnss_Load(object sender, EventArgs e)
         {
+            LoadCNSSData();
 
         }
 
@@ -352,5 +355,13 @@ namespace Project_dotNet.Forms
         {
 
         }
+        private void DisplayEmployerContribution()
+{
+    // Set the Employer Contribution TextBox to read-only
+    textboxEmployerContribution.ReadOnly = true;
+
+    // Set the default value to "18.19%" as a constant display
+    textboxEmployerContribution.Text = (EmployerContributionPercentage * 100).ToString("F2") + "%";
+}
     }
 }

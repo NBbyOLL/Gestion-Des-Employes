@@ -32,6 +32,7 @@ namespace Project_dotNet
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Emsi));
             panel1 = new Panel();
+            pictureBox2 = new PictureBox();
             login_show_password = new CheckBox();
             login_password = new TextBox();
             Password = new Label();
@@ -44,12 +45,11 @@ namespace Project_dotNet
             errorProvider1 = new ErrorProvider(components);
             errorProvider2 = new ErrorProvider(components);
             login_button_Click = new Button();
-            pictureBox2 = new PictureBox();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)errorProvider2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -61,6 +61,17 @@ namespace Project_dotNet
             panel1.Size = new Size(442, 631);
             panel1.TabIndex = 16;
             panel1.Paint += panel1_Paint;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(399, 3);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(40, 32);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 3;
+            pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
             // 
             // login_show_password
             // 
@@ -156,17 +167,6 @@ namespace Project_dotNet
             login_button_Click.UseVisualStyleBackColor = false;
             login_button_Click.Click += button1_Click_1;
             // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(399, 3);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(40, 32);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 3;
-            pictureBox2.TabStop = false;
-            pictureBox2.Click += pictureBox2_Click;
-            // 
             // Emsi
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -187,10 +187,10 @@ namespace Project_dotNet
             Text = "Emsi";
             Load += Form1_Load;
             panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ((System.ComponentModel.ISupportInitialize)errorProvider2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
